@@ -42,20 +42,23 @@ a{
 .clasificaciones a{
     width: 100%;
     color:black; 
+    font-family: 'Syncopate', sans-serif;
  }
 
- 
+
 /*Body*/
 .ofertas{ 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+    font-family: 'Kanit', sans-serif;
 }
 
 .ofertas article{
     width: 380px;
     margin-bottom: 30px;
+   
 }
  section .ofertas{ 
     display: flex;
@@ -93,7 +96,7 @@ footer{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    
+   
 }
 
 .logo-final img { 
@@ -107,3 +110,4 @@ footer h4{
 footer i{
     color: orangered;
 }
+
