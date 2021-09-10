@@ -1,0 +1,61 @@
+li {
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+     }
+
+/*Header*/
+.header{
+    max-width: 1180px; 
+    margin:0 auto; 
+   
+} 
+/*como hago para que me queden en extremos opustos*/
+.logo-busqueda{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+
+.clasificaciones ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+.clasificaciones li{
+    text-align: center;
+    width: auto;  
+}
+.clasificaciones a{
+    width: 100%;
+    color:black; 
+    padding: 16px 0;
+ }
+/*Body*/
+ section .ofertas{ 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1180px;
+
+}
+section article{
+    width: 380px;
+    margin-bottom: 30px;
+}
+.ofertas img{
+    width: 100%;
+    max-width: 280px;
+}
+
+.product .more{
+    background-color: #444;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    display: inline-block; /* para que respete props de caja y no se encime con el elemento de arriba */
+}
