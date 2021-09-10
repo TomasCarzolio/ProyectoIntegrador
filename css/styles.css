@@ -1,23 +1,32 @@
+
+
+/*Header*/
 li {
     list-style-type: none;
+
 }
 
 a{
     text-decoration: none;
-     }
-
-/*Header*/
-.header{
-    max-width: 1180px; 
-    margin:0 auto; 
+ }
    
+
+.header{
+     
+    margin:0 auto;
+    background-color: azure; 
 } 
-/*como hago para que me queden en extremos opustos*/
+
 .logo-busqueda{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between; 
+}
+
+.logo-busqueda img{  
+    max-width: 150px;
+    max-height: 50px;
 }
 
 .clasificaciones ul{
@@ -33,29 +42,68 @@ a{
 .clasificaciones a{
     width: 100%;
     color:black; 
-    padding: 16px 0;
  }
+
+ 
 /*Body*/
+.ofertas{ 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ofertas article{
+    width: 380px;
+    margin-bottom: 30px;
+}
  section .ofertas{ 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     max-width: 1180px;
+}
 
-}
-section article{
-    width: 380px;
-    margin-bottom: 30px;
-}
+
+
 .ofertas img{
     width: 100%;
+    height: 400px;
     max-width: 280px;
+    justify-items: center;
 }
 
-.product .more{
-    background-color: #444;
-    padding: 10px 20px;
-    text-transform: capitalize;
-    display: inline-block; /* para que respete props de caja y no se encime con el elemento de arriba */
+
+
+/*Footer*/
+
+footer{
+    background-color: azure;
+}
+
+.nosotros{ 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.final{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.logo-final img { 
+    max-width: 150px;
+    max-height: 50px;
+}
+
+footer h4{
+    color: orangered;
+}
+footer i{
+    color: orangered;
 }
