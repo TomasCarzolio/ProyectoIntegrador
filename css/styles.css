@@ -3,17 +3,13 @@
 /*Header*/
 li {
     list-style-type: none;
-
 }
 
 a{
     text-decoration: none;
- }
-   
+ }  
 
-.header{
-     
-    margin:0 auto;
+.header{   
     background-color: azure; 
 } 
 
@@ -41,31 +37,43 @@ a{
 }
 .clasificaciones a{
     width: 100%;
-    color:black; 
+    color: orangered; 
     font-family: 'Syncopate', sans-serif;
  }
 
 
 /*Body*/
+html{
+    background-image: url(../img/Fondo.jpeg);
+}
+
 .ofertas{ 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     font-family: 'Kanit', sans-serif;
+    background-color: rgb(251, 247, 238); /* background-color: #444; (cual va mejor?)---- falta separar las distintas cajas*/
+   
+     
 }
 
 .ofertas article{
     width: 380px;
     margin-bottom: 30px;
-   
+    margin-top: 30px ;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Kanit', sans-serif; 
 }
  section .ofertas{ 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 1180px;
+    max-width: 1180px;   
 }
 
 
@@ -74,10 +82,17 @@ a{
     width: 100%;
     height: 400px;
     max-width: 280px;
-    justify-items: center;
+    /*no puedo centrar la foto*/  
+}
+    
+    
+section p{
+    color: rgb(41, 51, 61);
 }
 
-
+section h2{
+    color: orangered; 
+}
 
 /*Footer*/
 
@@ -96,17 +111,18 @@ footer{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-   
+    font-family: 'Kanit', sans-serif;  
 }
 
 .logo-final img { 
     max-width: 150px;
-    max-height: 50px;
+    max-height: 50px;    
 }
 
 footer h4{
     color: orangered;
 }
+
 footer i{
     color: orangered;
 }
