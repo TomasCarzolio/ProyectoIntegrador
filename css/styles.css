@@ -9,6 +9,11 @@ a{
     text-decoration: none;
  }  
 
+form button{
+    color: orangered;
+}
+
+
 .header{   
     background-color: azure; 
 } 
@@ -43,6 +48,8 @@ a{
 
 
 /*Body*/
+        /*imagenes centradas, definir las box asi se ve el fondo entre ellas*/
+
 html{
     background-image: url(../img/Fondo.jpeg);
 }
@@ -53,9 +60,7 @@ html{
     flex-direction: row;
     justify-content: space-between;
     font-family: 'Kanit', sans-serif;
-    background-color: rgb(251, 247, 238); /* background-color: #444; (cual va mejor?)---- falta separar las distintas cajas*/
-   
-     
+    background-color: rgb(251, 247, 238); /* background-color: #444; (cual va mejor?)---- falta separar las distintas cajas*/     
 }
 
 .ofertas article{
@@ -67,34 +72,39 @@ html{
     flex-direction: row;
     justify-content: space-between;
     font-family: 'Kanit', sans-serif; 
+    
 }
  section .ofertas{ 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 1180px;   
+    max-width: 1180px; 
 }
-
 
 
 .ofertas img{
     width: 100%;
     height: 400px;
     max-width: 280px;
-    /*no puedo centrar la foto*/  
 }
     
     
 section p{
     color: rgb(41, 51, 61);
+    text-align: center;
 }
 
 section h2{
     color: orangered; 
 }
 
+section h3{
+    text-align: center;
+}
+
 /*Footer*/
+        /*logo abajo a la izquierda*/
 
 footer{
     background-color: azure;

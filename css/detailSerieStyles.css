@@ -1,6 +1,3 @@
-
-
-
 html{
     background-image: url(../img/Fondo.jpeg);
     
@@ -12,27 +9,33 @@ main{
     
  }
 
-.detalle-pelicula{ 
+.detalle-serie{ 
 display: flex;
 flex-wrap: wrap;
 flex-direction: row;
 justify-content: space-between;
 text-align: justify;
+
 }
 
-.detalle-pelicula article{
+.detalle-serie article{
     width: 380px;
     margin-bottom: 30px;  
 }
 
 
-.detalle-pelicula img{
+.detalle-serie img{
     width: 100%;
     height: 400px;
     max-width: 280px;
+    
     
 }
 
 i{
     color: rgb(230, 230, 27);
+}
+
+h3{
+    text-align: center
 }
