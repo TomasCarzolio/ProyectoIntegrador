@@ -4,38 +4,114 @@ html{
 }
 
 
-main{
+
+/*Body*/
+
+main{ 
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-family: 'Kanit', sans-serif;
     background-color: rgb(251, 247, 238);
-    
- }
-
-.detalle-serie{ 
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-justify-content: space-between;
-text-align: justify;
-
+    border-style: solid;
+    border-color: rgb(238, 137, 100);
+    margin: 0% 15%; 
+    padding: 50px;
 }
 
-.detalle-serie article{
-    width: 380px;
-    margin-bottom: 30px;  
+.favorito{
+    color: rgba(0, 0, 0, 0.719);
+    text-decoration: none;
+}
+ .detalle-serie h1{ /*detalle película*/
+    padding: 15px;
+    text-align: center;  
+    font-family: 'Kanit', sans-serif; 
+    color: rgb(202, 57, 5);
+    width: 100%; 
+}
+
+.detalle-serie h2{ /*star wars*/
+    color: rgb(238, 137, 100);
+}
+
+.detalle-serie article{ 
+    text-align: center;
+    
+    font-family: 'Kanit', sans-serif; 
+    
 }
 
 
 .detalle-serie img{
     width: 100%;
     height: 400px;
-    max-width: 280px;
-    
-    
+    max-width: 280px;  
+    border-style: solid;
+    border-color: rgb(238, 137, 100);
 }
 
 i{
     color: rgb(230, 230, 27);
 }
 
-h3{
-    text-align: center
+p{
+    line-height:25px;
 }
+
+
+/*Footer*/
+
+footer {
+    background-color: azure;
+    margin-top: 30px;
+}
+    
+
+.nosotros section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding:0;
+   
+}
+.nosotros{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-around;
+}
+
+.final{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-family: 'Kanit', sans-serif;  
+}
+
+.logo-final img { 
+    max-width: 150px;
+    max-height: 50px;  
+}
+
+.logo-final { 
+   display: flex;
+   justify-content: center; /*arriba medio*/
+   align-self: center; /*medio*/
+   justify-self: flex-start;
+   width: 30%;   
+}
+footer h4{
+    color: orangered;
+}
+
+footer i{
+    color: orangered;
+    max-height: 25px;
+    max-width: 25px;
+}
+
