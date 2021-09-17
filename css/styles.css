@@ -20,6 +20,7 @@ form button{
     flex-direction: row;
     background-color: azure;
     margin-bottom: 30px; 
+    width: 100%;
 } 
 
 header ul{
@@ -166,4 +167,6 @@ footer i{
     max-height: 25px;
     max-width: 25px;
 }
+
+/*viewport*/
 
