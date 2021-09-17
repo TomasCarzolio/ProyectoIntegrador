@@ -15,13 +15,46 @@ main{
     background-color: rgb(251, 247, 238);
     border-style: solid;
     border-color: rgb(238, 137, 100);
-    margin: 0% 15%; 
-    padding: 50px;
+    margin: 0% 10%; 
+    padding: 3.5%;
 }
 
 .favorito{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    height: 12vh;
+    width: 10vw;
     color: rgba(0, 0, 0, 0.719);
     text-decoration: none;
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding:0%;
+}
+
+.favorito a{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 10vw;
+    margin: 0%;
+    padding: 0;
+}
+
+#descripcion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    width: 30vw;
+    height: 20vh;
+}
+.detalle-serie{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
  .detalle-serie h1{ /*detalle película*/
     padding: 15px;
@@ -31,26 +64,57 @@ main{
     width: 100%; 
 }
 
-.detalle-serie h2{ /*star wars*/
+.posicion-series { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 12vh;
     color: rgb(238, 137, 100);
+    font-family: 'Kanit', sans-serif;
+    width: 30vw;
 }
 
+.posicion-series h2, div{ 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    margin:0%;
+    height: 6vh;
+    width: 30vw;
+}
+
+.posicion-series h2{
+    font-size: 250%;
+}
+
+
 .detalle-serie article{ 
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
-    
     font-family: 'Kanit', sans-serif; 
-    
 }
 
 
 .detalle-serie img{
-    width: 100%;
-    height: 400px;
-    max-width: 280px;  
+    display: flex;
+    justify-self: flex-start;
+    width: 30vw;
+    height: 50vh; 
     border-style: solid;
     border-color: rgb(238, 137, 100);
+    margin: 0;
 }
 
+#info{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+}
 i{
     color: rgb(230, 230, 27);
 }
