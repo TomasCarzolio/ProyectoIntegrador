@@ -21,31 +21,18 @@
 <body>
     
     <header class="principio">
+         <img class="logo" src="./img/logo.PNG" alt="Logo de la pagina">
+         
+         <ul class="clasificaciones">
+             <li> <a href="./index.html"><h2>HOME</h2></a></li>
+             <li> <a href="./generos.html"><h2>GÉNEROS</h2></a></li>
+             <li> <a href="./favorite.html"><h2>FAVORITOS</h2></a></li>
+         </ul>
 
-        <div class="logo">
-            <img src="./img/logo.PNG" alt="logo">
-        </div>
-    
-        <div class="clasificaciones">
-            <ul>
-                <li> <a href="./index.html">
-                        <h2>HOME</h2>
-                    </a></li>
-                <li> <a href="./generos.html">
-                        <h2>GÉNEROS</h2>
-                    </a></li>
-                <li> <a href="./favorite.html">
-                        <h2>FAVORITOS</h2>
-                    </a></li>
-            </ul> 
-        </div>
-    
-        <div class="busqueda">
-            <form action="./search-results.html" method="GET">
-                <input type="text">
-                <button type="submit">Buscar</button>
-            </form>
-        </div>
+         <form class="busqueda" action="./search-results.html" method="GET">
+             <input type="text">
+             <button type="submit">Buscar</button>
+         </form>
     </header>
 
     <main>
@@ -157,35 +144,23 @@
 
     <footer class="final">
 
-        <div class="logo-final">
-            <img src="./img/logo.PNG">
-        </div>
-        <div class="nosotros">
-            <section>
-                <h4>TOMÁS CARZOLIO</h4>
-                <p>
-                    <a href="https://www.linkedin.com/in/tom%C3%A1s-carzolio-358856207/?originalSubdomain=ar">
-                        <i class="fab fa-linkedin"></i>
-                    </a>Tomás Carzolio
-                </p>
-                <p>
-                    <i class="fas fa-envelope-open-text"></i>tcarzolio@udesa.edu.ar
-                </p>
-            </section>
-
-            <section>
-                <h4>MARINA BÉRAUD</h4>
-                <p>
-                    <a href="https://www.linkedin.com/in/marina-b%C3%A9raud-98273b207/?originalSubdomain=ar">
-                        <i class="fab fa-linkedin"></i>
-                    </a>Marina Béraud
-                </p>
-                <p> <i class="fas fa-envelope-open-text"></i> mberaud@udesa.edu.ar</p>
-            </section>
-
-        </div>
-
-    </footer>
+        <img class="logo-final" src="./img/logo.PNG">
+       
+        <section class="foot">
+        <article class="nosotros">
+            <h4>TOMÁS CARZOLIO</h4>
+            <p><a href="https://www.linkedin.com/in/tom%C3%A1s-carzolio-358856207/?originalSubdomain=ar"><i class="fab fa-linkedin"></i></a>Tomás Carzolio</p>
+            <p><i class="fas fa-envelope-open-text"></i>tcarzolio@udesa.edu.ar</p>
+        </article>
+   
+        <article class="nosotros">
+            <h4>MARINA BÉRAUD</h4>
+            <p><a href="https://www.linkedin.com/in/marina-b%C3%A9raud-98273b207/?originalSubdomain=ar"><i class="fab fa-linkedin"></i></a>Marina Béraud</p>
+            <p> <i class="fas fa-envelope-open-text"></i> mberaud@udesa.edu.ar</p>
+        </article>
+        </section>
+   
+       </footer>
 
 </body>
 

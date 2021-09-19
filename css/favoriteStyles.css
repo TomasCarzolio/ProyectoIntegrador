@@ -1,10 +1,8 @@
-html{
-    background-image: url(../img/Fondo.jpeg);    
-}
-
 /*Header*/
-
-li {
+main{
+    background-color: rgb(251, 247, 238);
+}
+.principio li {
     list-style-type: none;
 }
 
@@ -20,8 +18,9 @@ form button{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    background-color: azure;
-    margin-bottom: 30px; 
+    background-color: azure; 
+    justify-content: space-around;
+    padding-left: 4%;
     width: 100%;
 } 
 
@@ -29,8 +28,7 @@ header ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-
+} 
 
 .clasificaciones{
     width: 55%;
@@ -40,10 +38,11 @@ header ul{
 .logo{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    width: 20%; 
+    width: 10%; 
+    height: 15%;
     justify-content: center;
     align-self: center;
+    padding: 1%;
 }
 
 .logo img{
@@ -67,7 +66,8 @@ header h2{
     font-size:xx-large;
 }
 
-
+/*Body*/
+ /*imagenes centradas, definir las box asi se ve el fondo entre ellas*/
 
 
 
@@ -75,44 +75,37 @@ header h2{
 
 footer {
     background-color: azure;
-    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-family: 'Kanit', sans-serif; 
 }
 
-.nosotros section {
+.foot{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+}
+.nosotros {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;  
-}
-
-.nosotros{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 80%;
+    align-items: center; 
+    width: 35%;
     justify-content: space-around;
 }
-
-.final{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    font-family: 'Kanit', sans-serif;  
-}
-
-.logo-final img { 
-    
-    max-width: 150px;
-    max-height: 50px;  
-}
-
 
 .logo-final { 
    display: flex;
    justify-content: center; /*arriba medio*/
    align-self: center; /*medio*/
-   width: 20%;   
+   width: 10%;  
+   max-width: 150px;
+   max-height: 50px;  
+   padding-left: 6%;
+   padding-right: 5%;
 }
 
 footer h4{

@@ -4,7 +4,7 @@
 main{
     background-color: rgb(251, 247, 238);
 }
-li {
+.principio li {
     list-style-type: none;
 }
 
@@ -16,97 +16,61 @@ form button{
     color: orangered;
 }
 
-
-.header{   
-    background-color: azure; 
-} 
-
-.logo-busqueda{
+.principio{  
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between; 
+    background-color: azure; 
+    justify-content: space-around;
+    padding-left: 4%;
+    width: 100%;
+} 
+
+header ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} 
+
+.clasificaciones{
+    width: 55%;
+    justify-content: space-around;    
 }
 
-.logo-busqueda img{  
+.logo{
+    display: flex;
+    flex-wrap: wrap;
+    width: 10%; 
+    height: 15%;
+    justify-content: center;
+    align-self: center;
+    padding: 1%;
+}
+
+.logo img{
     max-width: 150px;
     max-height: 50px;
 }
 
-.clasificaciones ul{
+.busqueda{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;   
+    justify-content:center;
+    align-self: center;
+    width: 25%;  
 }
-.clasificaciones li{
-    text-align: center;
-    width: auto;  
-}
-.clasificaciones a{
-    width: 100%;
-    color: orangered; 
-    font-family: 'Syncopate', sans-serif;
- }
 
+header h2{
+    color: orangered;
+    align-self: center;
+    font-family: 'Kanit', sans-serif; 
+    text-align: center;  
+    font-size:xx-large;
+}
 
 /*Body*/
-        /*imagenes centradas, definir las box asi se ve el fondo entre ellas*/
-        html{
-            background-image: url(../img/Fondo.jpeg);
-        }
-        
-footer {
-    background-color: azure;
-}
+ /*imagenes centradas, definir las box asi se ve el fondo entre ellas*/
 
-    
-
-.nosotros section {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding:0;
-   
-}
-.nosotros{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.final{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    font-family: 'Kanit', sans-serif;  
-}
-
-.logo-final img { 
-    max-width: 150px;
-    max-height: 50px;    
-}
-
-.logo-final { 
-    display: flex;
-   align-self: center;
-   justify-content: center;
-   justify-self: flex-start;   
-}
-
-footer h4{
-    color: orangered;
-}
-
-footer i{
-    color: orangered;
-    max-height: 25px;
-    max-width: 25px;
-}
 main ul{
     margin: 0;
     padding: 0;
@@ -152,4 +116,52 @@ main ul{
     font-weight: 900;
     color: orangered; 
     font-family: 'Syncopate', sans-serif;
+}
+       
+
+/*Footer*/
+
+footer {
+    background-color: azure;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-family: 'Kanit', sans-serif; 
+}
+
+.foot{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+}
+.nosotros {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center; 
+    width: 35%;
+    justify-content: space-around;
+}
+
+.logo-final { 
+   display: flex;
+   justify-content: center; /*arriba medio*/
+   align-self: center; /*medio*/
+   width: 10%;  
+   max-width: 150px;
+   max-height: 50px;  
+   padding-left: 6%;
+   padding-right: 5%;
+}
+
+footer h4{
+    color: orangered;
+}
+
+footer i{
+    color: orangered;
+    max-height: 25px;
+    max-width: 25px;
 }

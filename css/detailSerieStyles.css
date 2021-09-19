@@ -1,9 +1,68 @@
-html{
-    background-image: url(../img/Fondo.jpeg);
-    
+/*Header*/
+
+.principio li {
+    list-style-type: none;
 }
 
+a{
+    text-decoration: none;
+ }  
 
+form button{
+    color: orangered;
+}
+
+.principio{  
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: azure; 
+    justify-content: space-around;
+    padding-left: 4%;
+    width: 100%;
+} 
+
+header ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} 
+
+.clasificaciones{
+    width: 55%;
+    justify-content: space-around;    
+}
+
+.logo{
+    display: flex;
+    flex-wrap: wrap;
+    width: 10%; 
+    height: 15%;
+    justify-content: center;
+    align-self: center;
+    padding: 1%;
+}
+
+.logo img{
+    max-width: 150px;
+    max-height: 50px;
+}
+
+.busqueda{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-self: center;
+    width: 25%;  
+}
+
+header h2{
+    color: orangered;
+    align-self: center;
+    font-family: 'Kanit', sans-serif; 
+    text-align: center;  
+    font-size:xx-large;
+}
 
 /*Body*/
 
@@ -128,47 +187,39 @@ p{
 
 footer {
     background-color: azure;
-    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-family: 'Kanit', sans-serif; 
 }
-    
 
-.nosotros section {
+.foot{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+}
+.nosotros {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding:0;
-   
-}
-.nosotros{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 70%;
+    align-items: center; 
+    width: 35%;
     justify-content: space-around;
-}
-
-.final{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    font-family: 'Kanit', sans-serif;  
-}
-
-.logo-final img { 
-    max-width: 150px;
-    max-height: 50px;  
 }
 
 .logo-final { 
    display: flex;
    justify-content: center; /*arriba medio*/
    align-self: center; /*medio*/
-   justify-self: flex-start;
-   width: 30%;   
+   width: 10%;  
+   max-width: 150px;
+   max-height: 50px;  
+   padding-left: 6%;
+   padding-right: 5%;
 }
+
 footer h4{
     color: orangered;
 }
@@ -178,4 +229,5 @@ footer i{
     max-height: 25px;
     max-width: 25px;
 }
+
 
