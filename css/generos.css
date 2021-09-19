@@ -1,9 +1,8 @@
-
-
-/*Header*/
 main{
     background-color: rgb(251, 247, 238);
 }
+
+/*Header*/
 .principio li {
     list-style-type: none;
 }
@@ -69,7 +68,6 @@ header h2{
 }
 
 /*Body*/
- /*imagenes centradas, definir las box asi se ve el fondo entre ellas*/
 
 main ul{
     margin: 0;
@@ -79,6 +77,7 @@ main ul{
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .generos {
     display: flex;
     flex-direction: column;
@@ -88,20 +87,18 @@ main ul{
     margin: 2%;
     background-color:rgb(255, 255, 255);
     width: 27vw;
-    height: 15vh;
-    border-radius: 60px;
-    border-color: orangered;
-    border-width: 3%;
+    height: 10vh;
+    background-color: rgb(236, 181, 161);
+    font-size: xx-large;
 }
 
 .generos a{
-   display: flex;
-   justify-self: center;
-   align-self: center;
+    display: flex;
+    justify-self: center;
+    align-self: center;
     font-weight: 800;
     color: orangered; 
-    font-family: 'Syncopate', sans-serif;
-    font-size: cover; 
+    font-family: 'Kanit', sans-serif;    
 }
 
 .titulo{
@@ -115,7 +112,7 @@ main ul{
     margin: 0%;
     font-weight: 900;
     color: orangered; 
-    font-family: 'Syncopate', sans-serif;
+    font-family: 'Kanit', sans-serif;   
 }
        
 
@@ -136,7 +133,7 @@ footer {
     justify-content: space-around;
     width: 70%;
 }
-.nosotros {
+.foot article {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -145,7 +142,7 @@ footer {
     justify-content: space-around;
 }
 
-.logo-final { 
+footer img{ 
    display: flex;
    justify-content: center; /*arriba medio*/
    align-self: center; /*medio*/
