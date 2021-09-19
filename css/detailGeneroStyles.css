@@ -65,9 +65,7 @@ header h2{
 }
 
 /*Body*/
-html{
-    background-image: url(../img/Fondo.jpeg);
-}
+
    
 article{
    display: flex;
