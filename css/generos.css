@@ -162,3 +162,26 @@ footer i{
     max-height: 25px;
     max-width: 25px;
 }
+
+@media (max-width: 375px){
+
+    /*Body*/
+    section{
+        max-width: 100%;
+    }
+
+    .generos{
+        width: 100%;
+        margin: 5% 5%;     
+    }
+
+    .titulo{
+        width: 100%;
+        text-align: center;
+        color: rgb(202, 57, 5);   
+    }
+    
+
+      
+      
+}

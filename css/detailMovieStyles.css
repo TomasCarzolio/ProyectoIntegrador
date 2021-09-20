@@ -130,7 +130,6 @@ main h1{
 
 .posicion-pelicula h2{
     font-size: 150%;
-   
 }
 
 #nombre-pelicula{
@@ -384,26 +383,27 @@ footer i{
         width: 100%;
     }
 
-    #generos{
-        width: 100%;
+     article .posicion-pelicula { 
+       max-width: 100%;   
     }
-
-    .posicion-pelicula{
-        width: 100%;
-    }
+    
+    
    
     .posicion-pelicula h2{
-        width: 100%;
+        width: 50%;
         font-size: small;
         margin: 0%;
     }
 
+
+
     .posicion-pelicula .puntación{
-        width: 100%;
+        width: 20%;
+        margin: auto 0%;
     }
 
     .favorito{
-        width: 100%;
+        width: 80%;
         margin: auto 0%;
         font-size: smaller;
     }
@@ -417,8 +417,6 @@ footer i{
    
 
     
-
-   
    
     /*Footer*/
     .foot{
