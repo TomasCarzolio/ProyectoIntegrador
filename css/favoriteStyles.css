@@ -77,15 +77,34 @@ header h2{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
     background-color: rgb(251, 247, 238);
     text-align: center;
     font-family: 'Kanit', sans-serif; 
+    width: 100vw;
+ }
+
+ .favoritos article{
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: column;
+     width: 37%;
+     padding: 5% 5%;
+ }
+
+ .favoritos h1{
+    font-family: 'Kanit', sans-serif; 
+    color: rgb(202, 57, 5);
+    width: 100%; 
+    text-align:center;
+    font-size: xxx-large;
+    margin: 5% 0% 5% 0%;
  }
  
   
  section img{
     width: 100%;
-    height: 280px;
+    height: 90%;
     border-style: solid;
     border-color: rgb(238, 137, 100);
  }         
@@ -98,12 +117,13 @@ header h2{
  section h2{  /*titulos de main*/
     color: rgb(202, 57, 5);
     width: 100%; 
-    text-align: start;
+    text-align: center;
  }
     
- section h3{  /*nombre de las series/peliculas*/
+.favoritos h3{  /*nombre de las series/peliculas*/
     color: rgb(238, 137, 100);
     text-align: center;
+    width: 100%;
  }
 
 /*Footer*/
@@ -112,7 +132,7 @@ footer {
     background-color: azure;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     font-family: 'Kanit', sans-serif; 
 }
 
@@ -120,15 +140,17 @@ footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-self: center;
     justify-content: space-around;
-    width: 70%;
+    width: 100%;
+    font-size: small;
 }
 .nosotros {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center; 
-    width: 35%;
+    width: 50%;
     justify-content: space-around;
 }
 
@@ -136,11 +158,9 @@ footer {
    display: flex;
    justify-content: center; /*arriba medio*/
    align-self: center; /*medio*/
-   width: 10%;  
-   max-width: 150px;
-   max-height: 50px;  
-   padding-left: 6%;
-   padding-right: 5%;
+   width: 40%;  
+   height: 50%; 
+   padding: 3% 5% 5% 0%;
 }
 
 footer h4{
@@ -151,4 +171,80 @@ footer i{
     color: orangered;
     max-height: 25px;
     max-width: 25px;
+}
+
+@media (min-width: 768px){
+
+    /*Header*/
+
+    header h2{
+       font-size: xx-large; 
+    }
+
+    .logo{
+     width: 30%; 
+     height: 40%;
+    }
+
+    .busqueda button, input{
+       font-size: large;
+    }
+
+    /*Body*/
+section h2{
+    font-size: xx-large;
+}
+
+.favoritos h3{ 
+    font-size: x-large;
+}
+
+    /*Footer*/
+
+    .logo-final { 
+        width: 25%;  
+        height: 35%; 
+     }
+
+}
+
+@media (min-width: 1024px){
+
+/*Header*/
+.logo{
+      width: 10%; 
+      height: 15%;
+     }
+
+ .principio{
+     flex-direction: row;
+     justify-content: space-around;
+ }
+
+ .clasificaciones{
+     width: 55%;
+ }
+
+ .busqueda{
+     width: 25%;
+ }
+
+ .clasificaciones h2{
+     font-size: medium;
+ }
+ /*Body*/
+
+ .favoritos h1{
+     margin: 5% 0 0 0;
+ }
+ 
+ .favoritos h3{
+     font-size: xx-large;
+ }
+     /*Footer*/
+ 
+     .logo-final { 
+         width: 25%;  
+         height: 35%; 
+      }
 }
