@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalles de las película</title>
+    <title>Info sobre película</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./css/detailMovieStyles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,38 +35,38 @@
    </header>
 
     <main>
-
-        <section class="detalle-pelicula">
-            <h1>DETALLE DE LA PELÍCULA</h1>
-            <article class="starWars">
-                <img src="./img/ReturnOfTheJedi.jpeg" alt="Star Wars">
-                <h2> STAR WARS: EPISODIO VI- EL RETORNO DEL JEDI</h2>
-                <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-                    class="fas fa-star"></i> <i class="fas fa-star-half"></i>
-                <a href="./detail-genero.html"> Ciencia ficción/Fantasía</a>
-                <br> <br>
-                <div>
-                    <a href="./favorite.html"> <i class="fas fa-bookmark"></i>
-                    </a>
-                    <a class="favorito" href="./favorite.html"> Agregar a favoritos</a>
-                </div>
-
-                <p>Fecha de estreno: 25 de mayo de 1983 </p>
-                <p> Duración: 128 minutos (versión original),
-                    135 minutos (edición especial)</p>
-                <p> Luke Skywalker y la princesa Leia deben viajar a Tatooine para liberar a Han Solo. Para conseguirlo,
-                    deben infiltrarse en la peligrosa guarida de Jabba the Hutt, el gángster más temido de la galaxia.
-                    Una vez reunidos, el equipo recluta a tribus de Ewoks para combatir a las fuerzas imperiales en los
-                    bosques de la luna de Endor. Mientras tanto, el Emperador y Darth Vader conspiran para convertir a
-                    Luke al lado oscuro, pero el joven Skywalker, por su parte, está decidido a reavivar el espíritu del
-                    Jedi en su padre. La guerra civil galáctica culmina en un último enfrentamiento entre las fuerzas
-                    rebeldes unificadas y una segunda Estrella de la Muerte, indefensa e incompleta, en una batalla que
-                    decidirá el destino de la galaxia.</p>
+            <h1> Info de la película </h1>
+            <img src="./img/ReturnOfTheJedi.jpeg" alt="friends" class="imagen">
+            <section class="info-1">
+                <article  class="posicion-pelicula">
+                 <div id="nombre-pelicula">
+                    <h2>STAR WARS: EPISODIO VI - EL RETORNO DEL JEDI</h2>
+                  <div>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                   </div>
+                 </div>
+                 <div>
+                    <a class="favorito" href="./favorite.html"><i class="fas fa-bookmark"></i>FAVORITOS</a>
+                 </div>
+              </article>
+             <article>
+             <p id="descripcion"> En la última entrega de la trilogía original, continúan las aventuras de nuestros héroes. Después de una atrevida misión para rescatar a Han Solo de Jabba the Hutt, los rebeldes son enviados a Endor para destruir la segunda Estrella de la Muerte.       Mientras tanto, Luke lucha por ayudar a Darth Vader a salir del lado oscuro sin caer en la trampa del Emperador.</p> 
             </article>
+            <article>
+                <h3 id="generos">Géneros: 
+                <a href="./generos.html">Ciencia Ficción</a>
+                <a href="./generos.html">Acción</a>
+                </h3>
+            </article>
+            <article id="info">
+                <p>Fecha de estreno: 1983</p>
+                <p> Duración: 2 hrs 11 min</p>
+            </article>
+         </section>
 
-
-        </section>
     </main>
+
 
     <footer class="final">
 
@@ -87,11 +87,6 @@
         </section>
    
        </footer>
-
-
-
-
-
-</body>
+ </body>
 
 </html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de las series</title>
+    <title>Info sobre serie</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./css/detailSerieStyles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,45 +32,38 @@
    </header>
 
     <main>
-        
-        <section class="detalle-serie">
-            <h1> DETALLE DE LAS SERIES</h1>
-
-            <article>
-                <img src="./img/friends.jpeg" alt="friends">
-            </article>
-            <article class="posicion-series">
-                <h2>F.R.I.E.N.D.S.</h2>
+            <h1> Info de la serie </h1>
+            <img src="./img/friends.jpeg" alt="friends" class="imagen">
+            <section class="info-1">
+                <article  class="posicion-series">
                 <div>
+                 <h2>F.R.I.E.N.D.S.</h2>
+                 <div>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                     class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
                 </div>
+                <div>
+                 <a class="favorito" href="./favorite.html"><i class="fas fa-bookmark"></i>FAVORITOS</a>
+                </div>
+             </article>
+             <article>
+             <p id="descripcion"> "F.R.I.E.N.D.S." narra las aventuras y desventuras de seis jóvenes de Nueva York. Rachel (Jennifer Aniston), Monica (Courteney Cox), Phoebe (Lisa Kudrow), Ross (David Schwimmer), Chandler (Matthew Perry) y Joey (Matt LeBlanc) forman una unida pandilla de amigos que viven en Manhattan y que suelen reunirse en sus apartamentos o en su bar habitual, el Central Perk. A pesar de los numerosos cambios que se producen en sus vidas, su amistad es inquebrantable en la dura batalla por salir adelante en sus periplos profesionales y personales.</p> 
             </article>
-                <article class="favorito" >
-                    <a href="./favorite.html"><i class="fas fa-bookmark"></i>FAVORITOS</a>
-                </article>
-                <article id="descripcion">
-                    <p> "Friends" narra las aventuras y desventuras de seis jóvenes de Nueva York. Rachel (Jennifer
-                    Aniston), Monica (Courteney Cox), Phoebe (Lisa Kudrow), Ross (David Schwimmer), Chandler (Matthew
-                    Perry) y Joey (Matt LeBlanc) forman una unida pandilla de amigos que viven en Manhattan y que suelen
-                    reunirse en sus apartamentos o en su bar habitual, el Central Perk. A pesar de los numerosos cambios
-                    que se producen en sus vidas, su amistad es inquebrantable en la dura batalla por salir adelante en
-                    sus periplos profesionales y personales.</p> </article>
-                <article id="generos">
-                <h3>Géneros: <a href="./generos.html">Género 1</a>,
-                    <a href="./generos.html">Género 2</a>,
-                    <a href="./generos.html">Género 3</a>
+            <article>
+                <h3 id="generos">Géneros: 
+                <a href="./generos.html">Comedia</a>
+                <a href="./generos.html">Sitcom</a>
+                <a href="./generos.html">Romántica</a>
                 </h3>
-                 </article>
-                <br><br>
-               <article id="info">
-                <p>1994</p>
-                <p>10 Temporadas </p>
-                <p>236 capítulos</p>
-            
             </article>
-            
-        </section>
+            <article id="info">
+                <p>Fecha de estreno: 1994</p>
+                <p>10 Temporadas</p>
+                <p>236 capítulos</p>
+            </article>
+         </section>
+
     </main>
 
 
