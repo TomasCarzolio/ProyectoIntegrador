@@ -2,7 +2,7 @@
 main{
     background-color: rgb(251, 247, 238);
 }
-.principio li {
+.clasificaciones li {
     list-style-type: none;
 }
 
@@ -17,29 +17,37 @@ form button{
 .principio{  
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     background-color: azure; 
-    justify-content: space-around;
-    padding-left: 4%;
+    justify-content: center;
     width: 100%;
 } 
 
-header ul{
+.clasificaciones{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-self: center;
     justify-content: space-around;
+    align-content: center;
+    padding: 0;
+    width: 100%;
 } 
 
-.clasificaciones{
-    width: 55%;
-    justify-content: space-around;    
+header h2{
+    color: orangered;
+    align-self: center;
+    font-family: 'Kanit', sans-serif; 
+    text-align: center;  
+    font-size: large;
 }
+
 
 .logo{
     display: flex;
     flex-wrap: wrap;
-    width: 10%; 
-    height: 15%;
+    width: 40%; 
+    height: 50%;
     justify-content: center;
     align-self: center;
     padding: 1%;
@@ -53,23 +61,50 @@ header ul{
 .busqueda{
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
+    flex-direction: row;
+    justify-content:space-around;
     align-self: center;
-    width: 25%;  
+    width: 70%;  
+    margin-bottom: 5%;
 }
 
-header h2{
-    color: orangered;
-    align-self: center;
-    font-family: 'Kanit', sans-serif; 
-    text-align: center;  
-    font-size:xx-large;
-}
+
 
 /*Body*/
  /*imagenes centradas, definir las box asi se ve el fondo entre ellas*/
 
-
+.favoritos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: rgb(251, 247, 238);
+    text-align: center;
+    font-family: 'Kanit', sans-serif; 
+ }
+ 
+  
+ section img{
+    width: 100%;
+    height: 280px;
+    border-style: solid;
+    border-color: rgb(238, 137, 100);
+ }         
+        
+ section p{
+    color: rgb(41, 51, 61);
+    
+ }
+    
+ section h2{  /*titulos de main*/
+    color: rgb(202, 57, 5);
+    width: 100%; 
+    text-align: start;
+ }
+    
+ section h3{  /*nombre de las series/peliculas*/
+    color: rgb(238, 137, 100);
+    text-align: center;
+ }
 
 /*Footer*/
 
