@@ -200,25 +200,15 @@ footer i{
         height: 15%;
     }
     .foot article{
-        width: 50%;
-        
-        
+        width: 50%; 
     }
+
     .foot article p {
         font-size: smaller;
     }
+
     footer h4{
         font-size: medium;
     }
     
-    
-    
-    
-    
-
-            
-   
-
-
-
 }

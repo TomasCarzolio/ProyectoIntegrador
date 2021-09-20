@@ -218,6 +218,10 @@ main h1{
     padding-bottom: 5%;
 }
 
+main h2{
+    width: 100%;
+}
+
 .imagen {
     display: flex;
     width: 30vw;
@@ -256,6 +260,7 @@ main h1{
 }
 
 .posicion-pelicula h2{
+    width: 100%;
     font-size: 250%;
 }
 .favorito{
@@ -361,3 +366,81 @@ footer i{
     max-width: 25px;
 }
 
+@media (max-width: 375px){
+   /*Body*/
+   main{
+       width: 100%;
+       margin: 0%;
+   }
+
+   .imagen{
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;  
+    }  
+
+    #descripcion{
+        width: 100%;
+    }
+
+    #generos{
+        width: 100%;
+    }
+    .posicion-pelicula{
+        width: 100%;
+    }
+    .posicion-pelicula .puntuación{
+        width: 100%;
+    }
+
+    .posicion-pelicula h2{
+        width: 100%;
+
+        font-size: medium;
+        margin: 0%;
+    }
+
+    .favorito{
+        width: 100%;
+        margin: 0%;
+    }
+
+    h1{
+        
+        font-size:x-large ; 
+    }
+
+    
+
+    section{
+        width: 100%;
+    }
+
+    
+
+   
+   
+    /*Footer*/
+    .foot{
+        width: 100%;
+    }
+
+    footer img{ 
+        margin-top: 5%;
+        width: 50%; 
+        height: 15%;
+    }
+    .foot article{
+        width: 50%; 
+    }
+
+    .foot article p {
+        font-size: smaller;
+    }
+
+    footer h4{
+        font-size: medium;
+    }
+    
+
+}
