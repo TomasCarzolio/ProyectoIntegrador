@@ -64,6 +64,9 @@ header h2{
     font-size:xx-large;
 }
 
+
+
+
 /*Body*/
 
 body{
@@ -190,6 +193,126 @@ p{
     line-height:25px;
 }
 
+
+/*Body*/
+
+body{
+    background-color: rgb(251, 247, 238);
+}
+main{ 
+    display: flex; 
+    flex-wrap:wrap;
+    flex-direction: row;
+    font-family: 'Kanit', sans-serif;
+    margin: 0% 10% 3% 10%; 
+    padding: 3.5%;
+}
+
+main h1{ 
+    padding: 15px;
+    text-align: center;  
+    font-family: 'Kanit', sans-serif; 
+    color: rgb(202, 57, 5);
+    width: 100%; 
+    text-transform: uppercase;
+    padding-bottom: 5%;
+}
+
+.imagen {
+    display: flex;
+    width: 30vw;
+    height: 60vh; 
+    border-style: solid;
+    border-color: rgb(238, 137, 100);
+    margin: 0;
+    float: left;
+}
+.info-1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 3%;
+}
+.posicion-pelicula { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    color: rgb(238, 137, 100);
+    font-family: 'Kanit', sans-serif;
+    width: 35vw;
+    height: 12vh;
+}
+
+.posicion-pelicula h2, div{ 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    margin:0%;
+    height: 6vh;
+    width: 30vw;
+}
+
+.posicion-pelicula h2{
+    font-size: 250%;
+}
+.favorito{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    height: 6vh;
+    width: 8vw;
+    color: rgba(0, 0, 0, 0.719);
+    text-decoration: none;
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding:0%;
+}
+
+#descripcion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    width: 35vw;
+    height: 20vh;
+    font-size: large;
+    text-align: justify;
+}
+
+#generos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    margin-top: 8%;
+    color:orangered;
+}
+
+#generos a{
+    color: rgb(238, 137, 100);
+}
+#info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 5%;
+    font-size: large;
+    font-weight: 800;
+}
+i{
+    color: rgb(230, 230, 27);
+}
+
+p{
+    line-height:25px;
+}
 
 /*Footer*/
 

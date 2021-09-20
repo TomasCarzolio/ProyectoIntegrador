@@ -151,6 +151,7 @@ main h1{
     width: 35vw;
     height: 20vh;
     font-size: large;
+    text-align: justify;
 }
 
 #generos{
@@ -160,7 +161,11 @@ main h1{
     justify-content: space-between;
     text-decoration: none;
     margin-top: 8%;
-    color: black;
+    color:orangered;
+}
+
+#generos a{
+    color: rgb(238, 137, 100);
 }
 #info{
     display: flex;
