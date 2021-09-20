@@ -335,7 +335,7 @@ footer {
     justify-content: space-around;
     width: 70%;
 }
-.nosotros {
+.foot article {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -344,7 +344,7 @@ footer {
     justify-content: space-around;
 }
 
-.logo-final { 
+footer img{ 
    display: flex;
    justify-content: center; /*arriba medio*/
    align-self: center; /*medio*/
@@ -366,6 +366,39 @@ footer i{
 }
 
 @media (max-width: 375px){
+     /*header*/
+     .principio{  
+        flex-direction: column;
+        justify-content: center;
+        padding: 0%;
+    } 
+    
+    .clasificaciones{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-self: center;
+        align-content: center;
+        padding: 0;
+        width: 100%;
+    } 
+    
+    header h2{
+        font-size: large;
+    }
+    
+    .logo{
+        width: 40%; 
+        height: 50%;
+    }
+    
+    .busqueda{
+        flex-direction: row;
+        justify-content:space-around;
+        width: 70%;  
+        margin-bottom: 5%;
+    }
+
    /*Body*/
 
    main{
@@ -412,15 +445,15 @@ footer i{
         font-size:x-large ; 
     }
 
-    
-
-   
-
-    
    
     /*Footer*/
     .foot{
-        width: 100%;
+    width: 100%;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
     }
 
     footer img{ 
@@ -438,7 +471,5 @@ footer i{
 
     footer h4{
         font-size: medium;
-    }
-    
-
+    } 
 }
