@@ -389,11 +389,9 @@ footer i{
     .posicion-pelicula{
         width: 100%;
     }
-    .posicion-pelicula .puntuación{
-        width: 100%;
-    }
+   
 
-    .posicion-pelicula h2{
+    .posicion-pelicula  div h2{
         width: 100%;
 
         font-size: medium;
