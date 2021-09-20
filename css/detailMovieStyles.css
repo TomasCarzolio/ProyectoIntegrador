@@ -368,6 +368,7 @@ footer i{
 
 @media (max-width: 375px){
    /*Body*/
+
    main{
        width: 100%;
        margin: 0%;
@@ -386,33 +387,34 @@ footer i{
     #generos{
         width: 100%;
     }
+
     .posicion-pelicula{
         width: 100%;
     }
    
-
-    .posicion-pelicula  div h2{
+    .posicion-pelicula h2{
         width: 100%;
-
-        font-size: medium;
+        font-size: small;
         margin: 0%;
+    }
+
+    .posicion-pelicula .puntación{
+        width: 100%;
     }
 
     .favorito{
         width: 100%;
-        margin: 0%;
+        margin: auto 0%;
+        font-size: smaller;
     }
 
-    h1{
-        
+    h1{  
         font-size:x-large ; 
     }
 
     
 
-    section{
-        width: 100%;
-    }
+   
 
     
 
