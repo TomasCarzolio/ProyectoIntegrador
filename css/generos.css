@@ -110,11 +110,12 @@ main ul{
     height: 10vh;
     font-size: 300%;
     margin: 0%;
+    padding-top: 2%;
     font-weight: 900;
     color: orangered; 
     font-family: 'Kanit', sans-serif;   
 }
-       
+
 
 /*Footer*/
 
