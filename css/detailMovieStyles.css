@@ -409,38 +409,40 @@ footer i{
    .imagen{
     width: 70%;
     height: 70%;
-    margin: 0 auto;  
+    margin: auto 10%;
+    margin-bottom: 10%;  
     }  
 
     #descripcion{
+    width: 100%;
+    }
+
+    .posicion-pelicula{
         width: 100%;
     }
 
-     article .posicion-pelicula { 
-       max-width: 100%;   
-    }
-    
-    
-   
     .posicion-pelicula h2{
         width: 50%;
-        font-size: small;
         margin: 0%;
-    }
-
-
-
-    .posicion-pelicula .puntación{
-        width: 20%;
-        margin: auto 0%;
+        display: block; 
+        font-size: medium;  
     }
 
     .favorito{
         width: 80%;
-        margin: auto 0%;
-        font-size: smaller;
+        margin-top: 50%;
+        font-size: small;
     }
 
+    article .posicion-pelicula { 
+       max-width: 100%;   
+    }
+    
+    .posicion-pelicula .puntación{
+        width: 20%;
+        margin: auto 0%;
+    }
+    
     h1{  
         font-size:x-large ; 
     }
