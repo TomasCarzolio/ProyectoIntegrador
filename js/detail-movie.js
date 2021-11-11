@@ -10,6 +10,8 @@ let qsToObject = new URLSearchParams(queryString);
 let id = qsToObject.get ('id'); //pregunto en el objeto literal el valor del id
 console.log (id);
 
+//conseguir datos de un personaje
+let url= 
 fetch(url)
     .then(function(response){
         return response.json()
