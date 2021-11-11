@@ -23,7 +23,7 @@ fetch(urlVistoPeliculas)
        for (let i=0; i<=4; i++){ //para que agregue y no pise //ver tema imagen
            elementosLista += 
                            `<div> 
-                                <a href="./ detail-movie.html?id=${info[i].id}"> <img scr= ${info[i].poster_path} </a>
+                                <a href="./ detail-movie.html?id=${info[i].id}"> <img scr='https://image.tmdb.org/t/p/w342/${info[i].poster_path}' </a>
                                 <h3>${info[i].title}</h3>
                                 <p> ${info[i].release_date} </p>
                            </div>`    
@@ -57,7 +57,8 @@ fetch(urlVistoSeries)
         for (let i=0; i<=4; i++){ //ver tema imagen
             elementosLista += 
                             `<div> 
-                                <img scr= ${info[i].poster_path} 
+                                <img scr= https://image.tmdb.org/t/p/w342/${info[i].poster_path}.jpg
+                                 
                                 <h3>${info[i].name}</h3>
                                 <p> ${info[i].first_air_date} </p>
                             </div>`    
