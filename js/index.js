@@ -11,21 +11,26 @@ fetch(urlVistoPeliculas)
     })
     .then(function(page){ //datos que acaba de procesar
         console.log(page);
+
+        //capturar elementos del DOM
        let lista = document.querySelector('.masVistoPeliculas');
+
+       //actualizar datos con el endpoint
        let elementosLista = ''
 
        let info = page.results; //para acortar el array
 
-       for (let i=0; i<=4; i++){ //ver tema imagen
+       for (let i=0; i<=4; i++){ //para que agregue y no pise //ver tema imagen
            elementosLista += 
                            `<div> 
-                                <img scr= ${info[i].poster_path} 
+                                <a href="./ detail-movie.html?id=${info[i].id}"> <img scr= ${info[i].poster_path} </a>
                                 <h3>${info[i].title}</h3>
                                 <p> ${info[i].release_date} </p>
                            </div>`    
         }
 
-       lista.innerHTML= elementosLista;
+       //manda al DOM el elemento actualizado 
+        lista.innerHTML= elementosLista;
 
     })
     .catch(function(error){
