@@ -23,7 +23,7 @@ fetch(urlVistoPeliculas)
        for (let i=0; i<=4; i++){ //para que agregue y no pise //ver tema imagen
            elementosLista += 
                            `<div> 
-                                <a href="./ detail-movie.html?id=${info[i].id}"> <img scr='https://image.tmdb.org/t/p/w342/${info[i].poster_path}' </a>
+                                <a href="./ detail-movie.html?id=${info[i].id}"> <img scr='https://image.tmdb.org/t/p/w342/${info[i].poster_path}.jpg' </a>
                                 <h3>${info[i].title}</h3>
                                 <p> ${info[i].release_date} </p>
                            </div>`    
