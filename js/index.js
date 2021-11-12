@@ -24,7 +24,7 @@ fetch(urlVistoPeliculas)
            console.log(info)
         elementosLista += 
                            `<div> 
-                                <a href="./ detail-movie.html?id=${info[i].id}"> <img scr='https://image.tmdb.org/t/p/w342${info[i].poster_path}'> </a>
+                           <a href="./detail-movie.html?id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="Cosa"> </a>
                                 <h3>${info[i].title}</h3>
                                 <p> ${info[i].release_date} </p>
                            </div>`    
@@ -58,8 +58,7 @@ fetch(urlVistoSeries)
         for (let i=0; i<=4; i++){ //ver tema imagen
             elementosLista += 
                             `<div> 
-                                <img scr= https://image.tmdb.org/t/p/w342/${info[i].poster_path}.jpg
-                                 
+                            <a href="./detail-movie.html?id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="Cosa"> </a>
                                 <h3>${info[i].name}</h3>
                                 <p> ${info[i].first_air_date} </p>
                             </div>`    
@@ -92,10 +91,9 @@ fetch(urlPeliculasValoradas)
         for( let i=0; i<=4; i++) {
             elementosLista +=
                             `<div> 
-                                <img scr= ${info[i].poster_path} 
+                            <a href="./detail-movie.html?id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="Cosa"> </a> 
                                 <h3>${info[i].title}</h3>
-                                <p> ${info[i].release_date} </p>
-                                
+                                <p> ${info[i].release_date} </p>                  
                             </div>`
         }
         lista.innerHTML= elementosLista;
