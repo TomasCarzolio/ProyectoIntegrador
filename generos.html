@@ -27,13 +27,14 @@
         </ul>
 
         <form class="busqueda" action="./search-results.html" method="GET">
-            <input type="text">
+            <input type="text" name='search' class="search" placeholder="Inserte búsqueda" value="">
+            <p class="message"></p>
             <button type="submit">Buscar</button>
         </form>
    </header>
 
    <main>
-       <section>
+       <!-- <section>
            <article class="titulo">PELÍCULAS</article>
         <ul>
            <li class="generos"> <a href= "detail-movie.html" type="_blank" >Acción</a> </li>
@@ -61,7 +62,15 @@
            <li class="generos"> <a href= "detail-movie.html" type="_blank" >Crimen</a> </li>
            <li class="generos"> <a href= "detail-movie.html" type="_blank" >Infantiles</a> </li>
         </ul>
-       </section>
+       </section> -->
+
+       <section>
+        <h1>Géneros</h1>
+        <h2>Películas</h2>
+        <article class="generosPeliculas"></article>
+        <h2>Series</h2>
+        <article class="generosSeries"></article>
+      </section>
    </main>
 
   
@@ -86,7 +95,7 @@
    </footer>
  
  
- 
+ <script src="./js/generos.js"></script>
 </body>
  
 </html>
