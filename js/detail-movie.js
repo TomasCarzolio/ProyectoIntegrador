@@ -29,7 +29,7 @@ inputField.addEventListener('focus', function(evento){
 )
 // Fin de formulario
 
-let apiKey= "?api_key=ff0d15573865ddc49a8a0b0024148010"
+const apiKey= "?api_key=ff0d15573865ddc49a8a0b0024148010"
 
 //Capturar QS
 let queryString = location.search; 
@@ -54,16 +54,27 @@ fetch(urlVistoPeliculas)
     })
     .then(function(data){
         console.log(data);
+        
+        //capturar elementos del DOM
+        let lista = document.querySelector( '.detalleVistoPelicula .posicion-pelicula')
 
-        //capturar el DOM
-        let titulo = document.querySelector('titulo');
+        //actualizar datos con el endpoint
+        let elementosLista = '';
+
+        for (let i=0; i<=4; i++){
+        
+        }
+        
+
+        //capturar elementos del DOM
+       /* let titulo = document.querySelector('titulo');
         let imagen = document.querySelector ('img');
         let puntuacion = document.querySelector ('.puntuación');
         let favorito = document.querySelector ('.favorito');
         let descripcion = document.querySelector ('.descripción');
         let generos = document.querySelector ('.generos');
         let estreno = document.querySelector ('.estreno');
-        let duracion= document. querySelector ('.duración');
+        let duracion= document. querySelector ('.duración'); */
 
         //ME QUEDE ACAAAAA
         //actualizar y mandar al DOM

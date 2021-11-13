@@ -30,7 +30,7 @@ inputField.addEventListener('focus', function(evento){
 )
 // Fin de formulario
 
-let apiKey= `?api_key=ff0d15573865ddc49a8a0b0024148010`
+const apiKey= `?api_key=ff0d15573865ddc49a8a0b0024148010`
 
 
 //LO MÁS VISTO EN PELICULAS
@@ -54,6 +54,7 @@ fetch(urlVistoPeliculas)
        for (let i=0; i<=4; i++){ //para que agregue y no pise //ver tema imagen
            console.log(info)
         elementosLista += 
+                            
                            `<div> 
                            <a href="./detail-movie.html?id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="Cosa"> </a>
                                 <h3>${info[i].title}</h3>
@@ -88,6 +89,7 @@ fetch(urlVistoSeries)
  
         for (let i=0; i<=4; i++){ //ver tema imagen
             elementosLista += 
+                          
                             `<div> 
                             <a href="./detail-movie.html?id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="Cosa"> </a>
                                 <h3>${info[i].name}</h3>
@@ -121,6 +123,7 @@ fetch(urlPeliculasValoradas)
 
         for( let i=0; i<=4; i++) {
             elementosLista +=
+                          
                             `<div> 
                             <a href="./detail-movie.html?id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="Cosa"> </a> 
                                 <h3>${info[i].title}</h3>
