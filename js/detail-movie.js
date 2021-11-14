@@ -29,62 +29,70 @@ inputField.addEventListener('focus', function(evento){
 )
 // Fin de formulario
 
-const apiKey= "?api_key=ff0d15573865ddc49a8a0b0024148010"
+const apiKey= "ff0d15573865ddc49a8a0b0024148010"
 
-//Capturar QS
-let queryString = location.search; 
+let queryString= location.search;
 console.log(queryString);
 
-//transformar la QS en objeto literal
-let qsToObject = new URLSearchParams(queryString);
+let qsToObject = new URLSearchParams (queryString);
+let id = qsToObject.get ("id");
 
+let urlPeliculas = (`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`)
 
-//obtener una propiedad del Objeto Literal del paso anterior
-let id = qsToObject.get ('id'); //pregunto en el objeto literal el valor del id
-console.log (id);
+let detallesPeliculas = document.querySelector ("detalleVistoPelicula")
 
-//conseguir datos de un personaje
-let urlVistoPeliculas= (`https://api.themoviedb.org/3/movie/${id}${apiKey}`) 
-let detallesMasVistoPeliculas = document.querySelector('.detalleVistoPelicula')  
-console.log (urlVistoPeliculas)
+fetch(urlPeliculas)
 
-fetch(urlVistoPeliculas)
     .then(function(response){
         return response.json()
     })
+
     .then(function(data){
-        console.log(data);
+        console.log (data)
         
-        //capturar elementos del DOM
-        let lista = document.querySelector( '.detalleVistoPelicula .posicion-pelicula')
-
-        //actualizar datos con el endpoint
-        let elementosLista = '';
-
-        for (let i=0; i<=4; i++){
-        
+        let listaGeneros = "<p> Géneros:</p>"; 
+        for (let i=0; i < datos.genres.length; i++){
+        listaGeneros += `<p> <a href="./detail-genres.html?id=${datos.genres[i].id}&nombreGenero=${datos.genres[i].name}"> ${datos.genres[i].name} </a></p>`
         }
-        
+            detallesPeliculas.innerHTML +=
 
-        //capturar elementos del DOM
-       /* let titulo = document.querySelector('titulo');
-        let imagen = document.querySelector ('img');
-        let puntuacion = document.querySelector ('.puntuación');
-        let favorito = document.querySelector ('.favorito');
-        let descripcion = document.querySelector ('.descripción');
-        let generos = document.querySelector ('.generos');
-        let estreno = document.querySelector ('.estreno');
-        let duracion= document. querySelector ('.duración'); */
+            `<article class="posicion-pelicula">
+            <h2 class="titulo"> ${datos.title}</h2>
+            <img src="https://image.tmdb.org/t/p/w342/${datos.poster_path}" alt="${datos.title}" alt="imagen">
+            <p class=puntuación> Puntuación:${datos.vote_average}</p>
+            <p class="favorito"> </p>
+        </article>
 
-        //ME QUEDE ACAAAAA
-        //actualizar y mandar al DOM
-        titulo.innerText = data.title;
-        imagen.scr= data.poster_path;
-       // puntuacion.
-        descripcion.innerText = data.overview;
+        <article>
+            <p class="descripción"> </p>
+        </article>
+       
+        <article>
+            <h3 class="generos">Género: <a href=""></a> </h3>
+            
 
+        <article class= "info"> 
+            <p class="estreno:">Fecha de estreno: ${datos.release_date}</p>
+            <p class="duración:">Duración:${datos.runtime}</p>
+        </article> `
+
+
+            ` 
+            <div class="navdetalles">
+                <h3 class="titulodetallepelicula">${datos.title}</h3>
+                <div> <img src="https://image.tmdb.org/t/p/w342/${datos.poster_path}" alt="${datos.title}" class="portada"> </div>
+            </div>
+            <div class="navdetalles">
+                <p>Calificación: ${datos.vote_average}</p>
+                <p>Fecha de Estreno: ${datos.release_date}</p> 
+                <p>Duración: ${datos.runtime}</p>
+                <p> ${datos.overview}</p>
+                ${listaGeneros}
+            </div>
+            `
     })
     .catch(function(error){
         console.log(error);
-
     })
+
+

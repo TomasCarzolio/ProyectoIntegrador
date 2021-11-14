@@ -40,10 +40,11 @@ let qsToObject = new URLSearchParams(queryString);
 
 
 //obtener una propiedad del Objeto Literal del paso anterior
-let id = qsToObject.get ('id'); //pregunto en el objeto literal el valor del id
+let id = qsToObject.get ("id"); //pregunto en el objeto literal el valor del id
 console.log (id);
 
-let urlVistoSerie= (`https://api.themoviedb.org/3/tv/${id}${apiKey}`);
+let urlVistoSerie = (`https://api.themoviedb.org/3/tv/${id}${apiKey}`)
+let detalleSerie = document.querySelector("section")
 
 fetch(urlVistoSerie)
     .then(function(response){
