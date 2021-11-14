@@ -68,6 +68,9 @@ header h2{
 
 /*Body*/
     
+    main{
+        background-color: rgb(251, 247, 238);
+    }
     .ofertas article{
         display: flex;
         flex-wrap: wrap;
@@ -96,7 +99,7 @@ header h2{
         
     }
         
-    section h2{  /*titulos de main*/
+     h2{  /*titulos de main*/
         color: rgb(202, 57, 5);
         width: 100%; 
         text-align: start;
