@@ -59,16 +59,16 @@ fetch(urlVistoSerie)
         let detalleSerie = document.querySelector('section');
         let elementoLista = '';
       
-        let info = J; //QUE PONGO ACA
+        //let info = J; //QUE PONGO ACA
 
-        for (let i=0; i<object.length; i++){
+        for (let i=0; i< datos.genres.length; i++){
             elementolista += 
                             `<img scr= "https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="imagen"> 
                             <section class="info-1">
 
                                 <article class="posicion-series">
                                     <div>
-                                        <h2> ${info[i].name} </h2> 
+                                        <h2> ${datos.name} </h2> 
                                     </div>
                                     <div>
                                         <p> Puntuación: ${info[i].vote_average}</p>
@@ -79,7 +79,7 @@ fetch(urlVistoSerie)
                                 </article>
 
                                 <article>
-                                    <p id="descripcion"> ${info[i].overview} </p>
+                                    <p id="descripcion"> ${datos.overview} </p>
                                 </article>
 
                                 <article>
@@ -96,6 +96,7 @@ fetch(urlVistoSerie)
         }
         detalleSerie.innerHTML= elementosLista;
     })
+    //VER TEMA GENEROS
 
     .catch (function(error){
         console.log(error);
