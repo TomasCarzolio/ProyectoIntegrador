@@ -53,29 +53,20 @@ fetch(urlVistoSerie)
         return response.json()
     })
 
-    .then(function(data){
-        console.log(data);
+    .then(function(datos){
+        console.log(datos);
 
-        let detalleSerie = document.querySelector('section');
+        let detalleSerie = document.querySelector('main');
         let elementoLista = '';
       
-        //let info = J; //QUE PONGO ACA
 
         for (let i=0; i< datos.genres.length; i++){
-            elementolista += 
-                            `<img scr= "https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="imagen"> 
+            elementoLista += 
+                            `<img src="https://image.tmdb.org/t/p/w342${datos.poster_path}" alt="Cosa">  
                             <section class="info-1">
 
                                 <article class="posicion-series">
-                                    <div>
                                         <h2> ${datos.name} </h2> 
-                                    </div>
-                                    <div>
-                                        <p> Puntuación: ${info[i].vote_average}</p>
-                                    </div>
-                                    <div>
-                                        <p> Agregar a favorito </p>
-                                    </div>
                                 </article>
 
                                 <article>
@@ -83,21 +74,30 @@ fetch(urlVistoSerie)
                                 </article>
 
                                 <article>
-                                    <h3 id="generos"> Género: ${info[i].genres.length} </h3>
+                                    <h3 id="generos"> Género:  </h3>
                                 </article>
 
                                 <article id= "info">
-                                    <p> Fecha de estreno: ${info[i].first_air_date} </p>
-                                    <p> Temporadas: ${info[i].number_of_seasons} </p>
-                                    <p> Capítulos: ${info[i].number_of_episodes}
+                                    <p> Fecha de estreno: ${datos.first_air_date} </p>
+                                    <p> Temporadas: ${datos.number_of_seasons} </p>
+                                    <p> Capítulos: ${datos.number_of_episodes}
+                                </article>
+
+                                <article>
+                                    <div>
+                                            <p> Puntuación: ${datos.vote_average}</p>
+                                        </div>
+                                        <div>
+                                            <p class= "agregarFavorito"> Agregar a favorito </p>
+                                        </div>
                                 </article>
 
                             </section>`
         }
-        detalleSerie.innerHTML= elementosLista;
+        detalleSerie.innerHTML= elementoLista;
     })
     //VER TEMA GENEROS
-
+    
     .catch (function(error){
         console.log(error);
     })
