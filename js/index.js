@@ -33,6 +33,7 @@ inputField.addEventListener('focus', function(evento){
 const apiKey= `?api_key=ff0d15573865ddc49a8a0b0024148010`
 
 
+
 //LO MÁS VISTO EN PELICULAS
 let urlVistoPeliculas= `https://api.themoviedb.org/3/movie/popular${apiKey}`
 
@@ -52,11 +53,11 @@ fetch(urlVistoPeliculas)
        let info = page.results; //para acortar el array
 
        for (let i=0; i<=4; i++){ //para que agregue y no pise //ver tema imagen
-           console.log(info)
+           //console.log(info)
         elementosLista += 
                             
                            `<div> 
-                           <a href="./detail-movie.html?id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="Cosa"> </a>
+                                <a href="detail-movie.html?id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="Cosa"> </a>
                                 <h3>${info[i].title}</h3>
                                 <p> ${info[i].release_date} </p>
                            </div>`    
@@ -91,7 +92,7 @@ fetch(urlVistoSeries)
             elementosLista += 
                           
                             `<div> 
-                            <a href="./detail-movie.html?id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="Cosa"> </a>
+                            <a href="./detail-serie.html?id=${info[i].id}">  <img src="https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="imagen"> </a>
                                 <h3>${info[i].name}</h3>
                                 <p> ${info[i].first_air_date} </p>
                             </div>`    
