@@ -1,4 +1,3 @@
-
 // Validando formularios
 
 let formulario = document.querySelector('form');
@@ -36,6 +35,7 @@ const apiKey= `?api_key=ff0d15573865ddc49a8a0b0024148010`
 
 //LO MÁS VISTO EN PELICULAS
 let urlVistoPeliculas= `https://api.themoviedb.org/3/movie/popular${apiKey}`
+//console.log (urlVistoPeliculas);
 
 fetch(urlVistoPeliculas)
     .then(function(response){
@@ -48,23 +48,24 @@ fetch(urlVistoPeliculas)
        let lista = document.querySelector('.masVistoPeliculas');
 
        //actualizar datos con el endpoint
-       let elementosLista = ''
+       let elementosListaPeliculas = ''
 
        let info = page.results; //para acortar el array
 
        for (let i=0; i<=4; i++){ //para que agregue y no pise //ver tema imagen
            //console.log(info)
-        elementosLista += 
+        elementosListaPeliculas += 
                             
                            `<div> 
                                 <a href="./detail-movie.html?id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="Cosa"> </a>
                                 <h3>${info[i].title}</h3>
                                 <p> ${info[i].release_date} </p>
-                           </div>`    
+                           </div>` 
+                           
         }
 
        //manda al DOM el elemento actualizado 
-        lista.innerHTML= elementosLista;
+        lista.innerHTML= elementosListaPeliculas;
 
     })
     .catch(function(error){
@@ -73,7 +74,7 @@ fetch(urlVistoPeliculas)
 
 //LO MÁS VISTO EN SERIES
 let urlVistoSeries= `https://api.themoviedb.org/3/tv/popular${apiKey}`
-console.log (urlVistoSeries);
+//console.log (urlVistoSeries);
 
 fetch(urlVistoSeries)
     .then(function(response){
@@ -95,7 +96,9 @@ fetch(urlVistoSeries)
                             <a href="./detail-serie.html?id=${info[i].id}">  <img src="https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="imagen"> </a>
                                 <h3>${info[i].name}</h3>
                                 <p> ${info[i].first_air_date} </p>
-                            </div>`    
+                            </div>`   
+                            
+                        
          }
  
         lista.innerHTML= elementosLista;
@@ -108,6 +111,7 @@ fetch(urlVistoSeries)
 
 //PELICULAS MÁS VALORADAS 
 let urlPeliculasValoradas= `https://api.themoviedb.org/3/movie/top_rated${apiKey}`
+//console.log (urlPeliculasValoradas);
 
 fetch(urlPeliculasValoradas)
     .then(function(response){
@@ -126,7 +130,7 @@ fetch(urlPeliculasValoradas)
             elementosLista +=
                           
                             `<div> 
-                            <a href="./detail-movie.html?id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="Cosa"> </a> 
+                            <a href="./detail-genero.html?id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="Cosa"> </a> 
                                 <h3>${info[i].title}</h3>
                                 <p> ${info[i].release_date} </p>                  
                             </div>`

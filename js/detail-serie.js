@@ -46,7 +46,9 @@ console.log (id);
 let urlVistoSerie = `https://api.themoviedb.org/3/tv/${id}?api_key=${apiKey}&language=en-US`
 console.log(urlVistoSerie);
 
-
+let detalleSerie = document.querySelector('main');
+let elementoLista = '';
+let generos = '<h3 id= "generos"> Género/s: '
 
 fetch(urlVistoSerie)
     .then(function(response){
@@ -56,13 +58,22 @@ fetch(urlVistoSerie)
     .then(function(datos){
         console.log(datos);
 
-        let detalleSerie = document.querySelector('main');
-        let elementoLista = '';
-      
+       
 
-        for (let i=0; i< datos.genres.length; i++){
+        /*let cantidadGenero ='';
+        for (let i=0; i<datos.genres[i].length; i++){
+            cantidadGenero += 1                    
+        }
+        */
+      
+        for (let i=0; i<1; i++){
+        /*
+            for (let i=0; i<datos.genres.length; i++){
+                generos += `<h3 id= "generos"> Género/s:${datos.genres[i].name}`
+            }
+           */
             elementoLista += 
-                            `<img src="https://image.tmdb.org/t/p/w342${datos.poster_path}" alt="Cosa">  
+                            `<img src="https://image.tmdb.org/t/p/w342${datos.poster_path}" alt="imagen">  
                             <section class="info-1">
 
                                 <article class="posicion-series">
@@ -74,7 +85,7 @@ fetch(urlVistoSerie)
                                 </article>
 
                                 <article>
-                                    <h3 id="generos"> Género:  </h3>
+                                    <h3 id="generos"> Género/s: ${datos.genres[i].name} </h3>
                                 </article>
 
                                 <article id= "info">
@@ -88,16 +99,20 @@ fetch(urlVistoSerie)
                                             <p> Puntuación: ${datos.vote_average}</p>
                                         </div>
                                         <div>
-                                            <p class= "agregarFavorito"> Agregar a favorito </p>
+                                        <a class="favorito" href="./favorite.html"><i class="fas fa-bookmark"></i>  Agregar a favoritos</a>
                                         </div>
+                                        
                                 </article>
 
                             </section>`
         }
         detalleSerie.innerHTML= elementoLista;
     })
-    //VER TEMA GENEROS
+   
     
     .catch (function(error){
         console.log(error);
     })
+
+
+     //VER TEMA GENEROS
