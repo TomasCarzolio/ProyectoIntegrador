@@ -47,7 +47,10 @@ let urlPeliculas = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&l
 
 console.log(urlPeliculas);
 
-
+let detalleSerie = document.querySelector('main');
+let elementoLista = '';
+let generos = '';
+let info= 'datos.genres'
 
 fetch(urlPeliculas)
     .then(function(response){
@@ -56,35 +59,11 @@ fetch(urlPeliculas)
 
     .then(function(datos){
         console.log(datos);
-
-        let detalleSerie = document.querySelector('main');
-        let elementoLista = '';
-
-      /* <section class="detalleVistoPelicula">
-
-    <article class="posicion-pelicula">
-        <h2 class="titulo"></h2>
-        <img src="" alt="">
-        <p class=puntuación> Puntuación:</p>
-        <p class="favorito"></p>
-    </article>
-
-    <article>
-        <p class="descripción"></p>
-    </article>
-   
-    <article>
-        <h3 class="generos">Género: <a href=""></a> </h3>
         
+        for (let i=0; i<datos.genres.length; i++){
+            generos += `<a href= ".generos.html?id?=${datos.genres[i].id}&nombregenero=${datos.genres[i].name}">  <h3 class="generos"> ${datos.genres[i].name} </h3> </a>`
+        } 
 
-    <article class= "info"> 
-        <p class="estreno:">Fecha de estreno:</p>
-        <p class="duración:">Duración:</p>
-    </article>
-</section>
-</main>
-
-    */
         for (let i=0; i<1; i++){
             elementoLista += 
                             `<img src="https://image.tmdb.org/t/p/w342${datos.poster_path}" alt="imagen">  
@@ -95,13 +74,15 @@ fetch(urlPeliculas)
                                         <h2 class= "titulo"> ${datos.title} </h2> 
                                 </article>
 
+                                <article class= "info-generos">
+                                <h3> Género/s: </h3>
+                                <p class= "generos"> ${generos} </p>
+                                  
+
                                 <article>
                                     <p class="descripcion"> ${datos.overview} </p>
                                 </article>
 
-                                <article>
-                                    <h3 class="generos"> Género: ${datos.genres[i].name} </h3>
-                                </article>
 
                                 <article class= "info">
                                     <p class= "estreno"> Fecha de estreno: ${datos.release_date} </p>
@@ -114,7 +95,7 @@ fetch(urlPeliculas)
                                             <p class= "puntuación"> Puntuación: ${datos.vote_average}</p>
                                         </div>
                                         <div>
-                                        <a href="./favorite.html"> <p> Agregar a favorito </p> </a>
+                                        <a class="favorito" href="./favorite.html"><i class="fas fa-bookmark"></i>  Agregar a favoritos</a>
                                         </div>
                                         
                                 </article>

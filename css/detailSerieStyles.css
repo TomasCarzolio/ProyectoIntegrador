@@ -69,6 +69,18 @@ header h2{
 body{
     background-color: rgb(251, 247, 238);
 }
+
+h1{ 
+      
+    font-family: 'Kanit', sans-serif; 
+    color: rgb(202, 57, 5);
+    width: 100%; 
+    text-transform: uppercase;
+    font-size: xx-large;
+    font-size: 300%;
+    text-align: center;  
+    } 
+
 main{ 
     display: flex; 
     flex-wrap:wrap;
@@ -78,15 +90,6 @@ main{
     padding: 3.5%;
 }
 
-main h1{ 
-    padding: 15px;
-    text-align: center;  
-    font-family: 'Kanit', sans-serif; 
-    color: rgb(202, 57, 5);
-    width: 100%; 
-    text-transform: uppercase;
-    padding-bottom: 5%;
-}
 
 .imagen {
     display: flex;
@@ -141,19 +144,24 @@ main h1{
     text-align: justify;
 }
 
-#generos{
+.info-generos{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space-between;
-    text-decoration: none;
-    margin-top: 8%;
-    color:orangered;
+    flex-direction: row;
+    margin-top: 5%;
+    font-size: large;
+    font-weight: 800;
 }
 
-#generos a{
+.info-generos h3{
+    color: rgb(238, 137, 100);  
+}
+
+.generos a{
     color: rgb(238, 137, 100);
 }
+
 #info{
     display: flex;
     flex-wrap: wrap;
@@ -262,6 +270,7 @@ footer i{
         margin: 0%;
     }
 
+
     .imagen{
         width: 70%;
         height: 70%;
@@ -293,9 +302,6 @@ footer i{
         font-size: small;
     }
 
-    h1{  
-        font-size:x-large ; 
-    }
 
     #info{
       width: 100%;
@@ -312,9 +318,6 @@ footer i{
       
     }
 
-  
-
-   
 
     /*Footer*/
     .foot{

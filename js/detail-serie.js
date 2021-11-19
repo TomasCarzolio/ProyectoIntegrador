@@ -48,7 +48,10 @@ console.log(urlVistoSerie);
 
 let detalleSerie = document.querySelector('main');
 let elementoLista = '';
-let generos = '<h3 id= "generos"> Género/s: '
+let generos = '';
+let info= 'datos.genres'
+
+
 
 fetch(urlVistoSerie)
     .then(function(response){
@@ -58,20 +61,13 @@ fetch(urlVistoSerie)
     .then(function(datos){
         console.log(datos);
 
-       
-
-        /*let cantidadGenero ='';
-        for (let i=0; i<datos.genres[i].length; i++){
-            cantidadGenero += 1                    
-        }
-        */
+         
+        for (let i=0; i<datos.genres.length; i++){
+             generos += `<a href= ".generos.html?id?=${datos.genres[i].id}&nombregenero=${datos.genres[i].name}">  <h3 class="generos"> ${datos.genres[i].name} </h3> </a>`
+         } 
       
         for (let i=0; i<1; i++){
-        /*
-            for (let i=0; i<datos.genres.length; i++){
-                generos += `<h3 id= "generos"> Género/s:${datos.genres[i].name}`
-            }
-           */
+       
             elementoLista += 
                             `<img src="https://image.tmdb.org/t/p/w342${datos.poster_path}" alt="imagen">  
                             <section class="info-1">
@@ -80,18 +76,19 @@ fetch(urlVistoSerie)
                                         <h2> ${datos.name} </h2> 
                                 </article>
 
-                                <article>
-                                    <p id="descripcion"> ${datos.overview} </p>
+                                <article class= "info-generos">
+                                  <h3> Género/s: </h3>
+                                  <p class= "generos"> ${generos} </p>
                                 </article>
 
                                 <article>
-                                    <h3 id="generos"> Género/s: ${datos.genres[i].name} </h3>
+                                    <p id="descripcion"> ${datos.overview} </p>
                                 </article>
 
                                 <article id= "info">
                                     <p> Fecha de estreno: ${datos.first_air_date} </p>
                                     <p> Temporadas: ${datos.number_of_seasons} </p>
-                                    <p> Capítulos: ${datos.number_of_episodes}
+                                    <p> Capítulos: ${datos.number_of_episodes} </p>
                                 </article>
 
                                 <article>
@@ -116,3 +113,4 @@ fetch(urlVistoSerie)
 
 
      //VER TEMA GENEROS
+      // <a href= ".generos.html">  <h3 id="generos"> Género/s: ${datos.genres[i].name} </h3> </a> 

@@ -66,27 +66,31 @@ header h2{
 
 /*Body*/
 
+
 body{
     background-color: rgb(251, 247, 238);
 }
+
+h1{ 
+      
+    font-family: 'Kanit', sans-serif; 
+    color: rgb(202, 57, 5);
+    width: 100%; 
+    text-transform: uppercase;
+    font-size: xx-large;
+    font-size: 300%;
+    text-align: center;  
+    } 
+
 main{ 
     display: flex; 
-    flex-wrap:wrap;
+    
     flex-direction: row;
     font-family: 'Kanit', sans-serif;
     margin: 0% 10% 3% 10%; 
     padding: 3.5%;
 }
 
-main h1{ 
-    padding: 15px;
-    text-align: center;  
-    font-family: 'Kanit', sans-serif; 
-    color: rgb(202, 57, 5);
-    width: 100%; 
-    text-transform: uppercase;
-    padding-bottom: 5%;
-}
 
 .imagen {
     display: flex;
@@ -96,7 +100,6 @@ main h1{
     border-color: rgb(238, 137, 100);
     margin: 0;
     float: left;
-
 }
 .info-1{
     display: flex;
@@ -129,20 +132,7 @@ main h1{
 .posicion-pelicula h2{
     font-size: 250%;
 }
-.favorito{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-    height: 6vh;
-    width: 8vw;
-    color: rgba(0, 0, 0, 0.719);
-    text-decoration: none;
-    font-family: 'Kanit', sans-serif;
-    margin: 0;
-    padding:0%;
-}
+
 
 .descripcion{
     display: flex;
@@ -155,14 +145,18 @@ main h1{
     text-align: justify;
 }
 
-.generos{
+.info-generos{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space-between;
-    text-decoration: none;
-    margin-top: 8%;
-    color:orangered;
+    flex-direction: row;
+    margin-top: 5%;
+    font-size: large;
+    font-weight: 800;
+}
+
+.info-generos h3{
+    color: rgb(238, 137, 100);  
 }
 
 .generos a{
@@ -178,6 +172,7 @@ main h1{
     font-size: large;
     font-weight: 800;
 }
+
 i{
     color: rgb(230, 230, 27);
 }
@@ -328,8 +323,6 @@ footer i{
     }
 
   
-
-   
 
     /*Footer*/
     .foot{
