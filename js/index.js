@@ -130,7 +130,7 @@ fetch(urlPeliculasValoradas)
             elementosLista +=
                           
                             `<div> 
-                            <a href="./detail-genero.html?id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="Cosa"> </a> 
+                            <a href="./detail-movie.html?id=${info[i].id}"> <img src="https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt="Cosa"> </a> 
                                 <h3>${info[i].title}</h3>
                                 <p> ${info[i].release_date} </p>                  
                             </div>`
@@ -141,3 +141,5 @@ fetch(urlPeliculasValoradas)
     .catch(function(error){
         console.log(error);
     })
+
+

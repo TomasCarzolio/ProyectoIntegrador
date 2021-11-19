@@ -64,9 +64,6 @@ header h2{
     font-size:xx-large;
 }
 
-
-
-
 /*Body*/
 
 body{
@@ -99,6 +96,7 @@ main h1{
     border-color: rgb(238, 137, 100);
     margin: 0;
     float: left;
+
 }
 .info-1{
     display: flex;
@@ -129,137 +127,6 @@ main h1{
 }
 
 .posicion-pelicula h2{
-    font-size: 150%;
-}
-
-#nombre-pelicula{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-}
-
-
-
-.favorito{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-    height: 6vh;
-    width: 8vw;
-    color: rgba(0, 0, 0, 0.719);
-    text-decoration: none;
-    font-family: 'Kanit', sans-serif;
-    margin: 0;
-    padding:0%;
-}
-
-#descripcion{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: center;
-    width: 35vw;
-    height: 20vh;
-    font-size: large;
-}
-
-#generos{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    text-decoration: none;
-    margin-top: 8%;
-    color: black;
-}
-#info{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-top: 5%;
-    font-size: large;
-    font-weight: 800;
-}
-i{
-    color: rgb(230, 230, 27);
-}
-
-p{
-    line-height:25px;
-}
-
-
-/*Body*/
-
-body{
-    background-color: rgb(251, 247, 238);
-}
-main{ 
-    display: flex; 
-    flex-wrap:wrap;
-    flex-direction: row;
-    font-family: 'Kanit', sans-serif;
-    margin: 0% 10% 3% 10%; 
-    padding: 3.5%;
-}
-
-main h1{ 
-    padding: 15px;
-    text-align: center;  
-    font-family: 'Kanit', sans-serif; 
-    color: rgb(202, 57, 5);
-    width: 100%; 
-    text-transform: uppercase;
-    padding-bottom: 5%;
-}
-
-main h2{
-    width: 100%;
-}
-
-.imagen {
-    display: flex;
-    width: 30vw;
-    height: 60vh; 
-    border-style: solid;
-    border-color: rgb(238, 137, 100);
-    margin: 0;
-    float: left;
-}
-.info-1{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: 3%;
-}
-.posicion-pelicula { 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    color: rgb(238, 137, 100);
-    font-family: 'Kanit', sans-serif;
-    width: 35vw;
-    height: 12vh;
-}
-
-.posicion-pelicula h2, div{ 
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    margin:0%;
-    height: 6vh;
-    width: 30vw;
-}
-
-.posicion-pelicula h2{
-    width: 100%;
     font-size: 250%;
 }
 .favorito{
@@ -277,7 +144,7 @@ main h2{
     padding:0%;
 }
 
-#descripcion{
+.descripcion{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -288,7 +155,7 @@ main h2{
     text-align: justify;
 }
 
-#generos{
+.generos{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -298,10 +165,11 @@ main h2{
     color:orangered;
 }
 
-#generos a{
+.generos a{
     color: rgb(238, 137, 100);
 }
-#info{
+
+.info{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -317,6 +185,7 @@ i{
 p{
     line-height:25px;
 }
+
 
 /*Footer*/
 
@@ -365,9 +234,11 @@ footer i{
     max-width: 25px;
 }
 
+
 @media (max-width: 375px){
-     /*header*/
-     .principio{  
+    
+    /*header*/
+    .principio{  
         flex-direction: column;
         justify-content: center;
         padding: 0%;
@@ -399,33 +270,36 @@ footer i{
         margin-bottom: 5%;
     }
 
-   /*Body*/
+     /*Body*/
 
-   main{
-       width: 100%;
-       margin: 0%;
-   }
+    main{
+        width: 100%;
+        margin: 0%;
+    }
 
-   .imagen{
-    width: 70%;
-    height: 70%;
-    margin: auto 10%;
-    margin-bottom: 10%;  
+    .imagen{
+        width: 70%;
+        height: 70%;
+        margin: auto 10%;
+        margin-bottom: 10%;  
     }  
 
     #descripcion{
-    width: 100%;
+        width: 100%;  
+        margin: 20% auto;     
     }
-
-    .posicion-pelicula{
+    
+    .posicion-series{
         width: 100%;
     }
 
-    .posicion-pelicula h2{
+    section h2{
         width: 50%;
+        font-size: small;
         margin: 0%;
-        display: block; 
-        font-size: medium;  
+        display: block;
+        margin-top: 3%;
+       
     }
 
     .favorito{
@@ -434,23 +308,32 @@ footer i{
         font-size: small;
     }
 
-    article .posicion-pelicula { 
-       max-width: 100%;   
-    }
-    
-    .posicion-pelicula .puntación{
-        width: 20%;
-        margin: auto 0%;
-    }
-    
     h1{  
         font-size:x-large ; 
     }
 
+    #info{
+      width: 100%;
+      display: block;
+    }
+
+    #generos{
+        width: 100%;
+      
+    }
+
+    .info-1{
+        width: 100%;
+      
+    }
+
+  
+
    
+
     /*Footer*/
     .foot{
-    width: 100%;
+        width: 100%;
     }
 
     footer{
@@ -473,5 +356,5 @@ footer i{
 
     footer h4{
         font-size: medium;
-    } 
+    }     
 }
