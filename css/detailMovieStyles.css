@@ -150,9 +150,7 @@ main{
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: row;
-    margin-top: 5%;
     font-size: large;
-    font-weight: 800;
 }
 
 .info-generos h3{
@@ -163,16 +161,6 @@ main{
     color: rgb(238, 137, 100);
 }
 
-.info{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-top: 5%;
-    font-size: large;
-    font-weight: 800;
-}
-
 i{
     color: rgb(230, 230, 27);
 }
@@ -180,6 +168,8 @@ i{
 p{
     line-height:25px;
 }
+
+
 
 
 /*Footer*/
@@ -279,7 +269,7 @@ footer i{
         margin-bottom: 10%;  
     }  
 
-    #descripcion{
+    .descripcion{
         width: 100%;  
         margin: 20% auto;     
     }
@@ -307,12 +297,12 @@ footer i{
         font-size:x-large ; 
     }
 
-    #info{
+    .info{
       width: 100%;
       display: block;
     }
 
-    #generos{
+    .generos{
         width: 100%;
       
     }
