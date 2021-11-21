@@ -51,8 +51,6 @@ let elementoLista = '';
 let generos = '';
 let info= 'datos.genres'
 
-
-
 fetch(urlVistoSerie)
     .then(function(response){
         return response.json()
@@ -96,7 +94,7 @@ fetch(urlVistoSerie)
                                             <p> Puntuación: ${datos.vote_average}</p>
                                         </div>
                                         <div>
-                                        <a class="favorito" href="./favorite.html"><i class="fas fa-bookmark"></i>  Agregar a favoritos</a>
+                                        <a class="fav" href="">Agregar a favoritos</a>
                                         </div>
                                         
                                 </article>
@@ -104,8 +102,50 @@ fetch(urlVistoSerie)
                             </section>`
         }
         detalleSerie.innerHTML= elementoLista;
+
+        //Array para guardar ids de gifs favoritos
+        let favoritos = [];
+
+        //Si hay datos anteriores entonces debemos actualizar el array.
+        let recuperoStorage = localStorage.getItem('favoritos'); //Esto retorna un json.
+
+        if (recuperoStorage != null){
+            favoritos = JSON.parse(recuperoStorage);
+        }   
+
+        //Cuando el usuario haga click en el link
+        let linkFav = document.querySelector('.fav');
+
+        //Si el id está en el array de favoritos
+        if(favoritos.includes(id)){
+            linkFav.innerText = 'Quitar de favoritos'       
+        }
+
+        linkFav.addEventListener('click', function(event){
+            event.preventDefault();
+
+            //Pregunto si el id está en el array
+            if(favoritos.includes(id)){
+                //Quiero sacar el id del array. Necesito saber la posición.
+                let idASacar = favoritos.indexOf(id);
+                //Sacar el id del array
+                favoritos.splice(idASacar, 1);
+                linkFav.innerText = "Agregar a Favoritos";
+
+            } else {
+                //pushear un id al array.
+                favoritos.push(id);
+                linkFav.innerText = 'Quitar de favoritos'
+            }
+            
+            //Guardar el array en localStorage
+            let favoritosAString = JSON.stringify(favoritos);
+            localStorage.setItem('favoritos', favoritosAString);
+
+            //Chequear que tenemos datos en el Local Storage
+            console.log(localStorage);
     })
-   
+})
     
     .catch (function(error){
         console.log(error);
