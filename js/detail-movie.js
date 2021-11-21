@@ -47,7 +47,7 @@ let urlPeliculas = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&l
 
 console.log(urlPeliculas);
 
-let detalleSerie = document.querySelector('main');
+let detallePelicula = document.querySelector('.movies');
 let elementoLista = '';
 let generos = '';
 let info= 'datos.genres'
@@ -95,20 +95,62 @@ fetch(urlPeliculas)
                                             <p class= "puntuación"> Puntuación: ${datos.vote_average}</p>
                                         </div>
                                         <div>
-                                        <a class="favorito" href="./favorite.html"><i class="fas fa-bookmark"></i>  Agregar a favoritos</a>
+                                        <a class="favs" href="">Agregar a favoritos</a>
                                         </div>
                                         
                                 </article>
 
                             </section>`
         }
-        detalleSerie.innerHTML= elementoLista;
+        detallePelicula.innerHTML= elementoLista;
+
+    //Array para guardar ids de gifs favoritos
+    let favoritosPelis = [];
+
+    //Si hay datos anteriores entonces debemos actualizar el array.
+    let recuperoStorage = localStorage.getItem('favoritosPelis'); //Esto retorna un json.
+
+    if (recuperoStorage != null){
+        favoritosPelis = JSON.parse(recuperoStorage);
+    }   
+
+    //Cuando el usuario haga click en el link
+    let linkFav = document.querySelector('.favs');
+
+    //Si el id está en el array de favoritos
+    if(favoritosPelis.includes(id)){
+        linkFav.innerText = 'Quitar de favoritos'       
+    }
+
+    linkFav.addEventListener('click', function(event){
+        event.preventDefault();
+
+        //Pregunto si el id está en el array
+        if(favoritosPelis.includes(id)){
+            //Quiero sacar el id del array. Necesito saber la posición.
+            let idASacar = favoritosPelis.indexOf(id);
+            //Sacar el id del array
+            favoritosPelis.splice(idASacar, 1);
+            linkFav.innerText = "Agregar a Favoritos";
+
+        } else {
+            //pushear un id al array.
+            favoritosPelis.push(id);
+            linkFav.innerText = 'Quitar de favoritos'
+        }
+        
+        //Guardar el array en localStorage
+        let favoritosPelisAString = JSON.stringify(favoritosPelis);
+        localStorage.setItem('favoritosPelis', favoritosPelisAString);
+
+        //Chequear que tenemos datos en el Local Storage
+        console.log(localStorage);
     })
-   
-    
-    .catch (function(error){
-        console.log(error);
-    })
+})
+
+.catch (function(error){
+    console.log(error);
+})
 
 
      //VER TEMA GENEROS

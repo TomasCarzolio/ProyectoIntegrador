@@ -73,7 +73,7 @@ header h2{
 /*Body*/
  
 
-.favoritos{
+.favs, .favsPelis{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -81,18 +81,25 @@ header h2{
     background-color: rgb(251, 247, 238);
     text-align: center;
     font-family: 'Kanit', sans-serif; 
-    width: 100vw;
+    width: 100%;
  }
 
- .favoritos article{
-     display: flex;
-     flex-wrap: wrap;
-     flex-direction: column;
-     width: 37%;
-     padding: 5% 5%;
+ .favs div, .favsPelis div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Kanit', sans-serif; 
+    width: 20vw;
+    margin: 0 2.5% 0 2.5%;
  }
 
- .favoritos h1{
+
+
+ 
+
+ .favs h1, .favsPelis h1{
     font-family: 'Kanit', sans-serif; 
     color: rgb(202, 57, 5);
     width: 100%; 
@@ -102,12 +109,12 @@ header h2{
  }
  
   
- section img{
+ /* section img{
     width: 100%;
     height: 90%;
     border-style: solid;
     border-color: rgb(238, 137, 100);
- }         
+ }   */      
         
  section p{
     color: rgb(41, 51, 61);
@@ -191,14 +198,8 @@ footer i{
     }
 
     /*Body*/
-section h2{
-    font-size: xx-large;
-}
 
-.favoritos h3{ 
-    font-size: x-large;
-}
-
+    
     /*Footer*/
 
     .logo-final { 
@@ -241,20 +242,25 @@ header h2{
  }
  /*Body*/
 
- .favoritos h1{
+  .favs h1{
      margin: 5% 0 5% 0;
  }
  
- .favoritos h2{
+ .favs h2{
      margin: 0;
  }
- .favoritos h3{
+ .favs h3{
      font-size: x-large;
  }
 
- .favoritos article{
+ .favs , .favsPelis{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     flex-direction: row;
      width: 15%;
- }
+ } 
+ 
      /*Footer*/
  
      .logo-final { 
