@@ -29,10 +29,10 @@ inputField.addEventListener('focus', function(evento){
 )
 // Fin de formulario
 
-const apiKey= `?api_key=ff0d15573865ddc49a8a0b0024148010`
+const apiKey= `ff0d15573865ddc49a8a0b0024148010`;
 
 //LO MÁS VISTO EN PELICULAS
-let urlVistoPeliculas= `https://api.themoviedb.org/3/movie/popular${apiKey}`
+let urlVistoPeliculas= `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`
 //console.log (urlVistoPeliculas);
 
 fetch(urlVistoPeliculas)
@@ -50,7 +50,7 @@ fetch(urlVistoPeliculas)
 
        let info = page.results; //para acortar el array
 
-       for (let i=0; i<=4; i++){ //para que agregue y no pise //ver tema imagen
+       for (let i=0; i<=4; i++){ //para que agregue y no pise 
            //console.log(info)
         elementosListaPeliculas += 
                             
@@ -62,7 +62,7 @@ fetch(urlVistoPeliculas)
         }
 
        //manda al DOM el elemento actualizado 
-        lista.innerHTML= elementosListaPeliculas;
+        lista.innerHTML += elementosListaPeliculas;
 
     })
     .catch(function(error){
@@ -71,7 +71,7 @@ fetch(urlVistoPeliculas)
 
 
 //LO MÁS VISTO EN SERIES
-let urlVistoSeries= `https://api.themoviedb.org/3/tv/popular${apiKey}`
+let urlVistoSeries= `https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}`
 //console.log (urlVistoSeries);
 
 fetch(urlVistoSeries)
@@ -87,7 +87,7 @@ fetch(urlVistoSeries)
  
         let info = page.results; //para acortar el array
  
-        for (let i=0; i<=4; i++){ //ver tema imagen
+        for (let i=0; i<=4; i++){ 
             elementosLista += 
                           
                             `<div> 
@@ -97,7 +97,7 @@ fetch(urlVistoSeries)
                             </div>`              
          }
  
-        lista.innerHTML= elementosLista;
+        lista.innerHTML += elementosLista;
  
      })
     .catch(function(error){
@@ -106,7 +106,7 @@ fetch(urlVistoSeries)
 
 
 //PELICULAS MÁS VALORADAS 
-let urlPeliculasValoradas= `https://api.themoviedb.org/3/movie/top_rated${apiKey}`
+let urlPeliculasValoradas= `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`
 //console.log (urlPeliculasValoradas);
 
 fetch(urlPeliculasValoradas)
@@ -131,7 +131,7 @@ fetch(urlPeliculasValoradas)
                                 <p> ${info[i].release_date} </p>                  
                             </div>`
         }
-        lista.innerHTML= elementosLista;
+        lista.innerHTML += elementosLista;
     })
 
     .catch(function(error){
