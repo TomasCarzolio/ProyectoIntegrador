@@ -67,7 +67,7 @@ header h2{
 /*Body*/
 
    
-article{
+section{
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;

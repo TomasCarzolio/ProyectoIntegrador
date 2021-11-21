@@ -68,57 +68,40 @@ header h2{
 }
 
 /*Body*/
-
-main ul{
-    margin: 0;
-    padding: 0;
+h1{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.generos {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    margin: 2%;
-    background-color:rgb(255, 255, 255);
-    width: 27vw;
-    height: 10vh;
-    background-color: rgb(236, 181, 161);
+    padding: 2%;
+}
+.titulo h2{
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
     font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.generos a{
+.generosPeliculas, .generosSeries{
+    text-decoration: none;
     display: flex;
     justify-self: center;
-    align-self: center;
-    font-weight: 800;
-    color: orangered; 
-    font-family: 'Kanit', sans-serif;    
-}
-
-.titulo{
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-content:center ;
-    width: 50vw;
-    height: 10vh;
-    font-size: 300%;
-    margin: 0%;
-    padding-top: 5%;
-    font-weight: 900;
-    color: orangered; 
-    font-family: 'Kanit', sans-serif;   
-}
-#series{
-    padding-bottom: 5%;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
+.generosPeliculas a, .generosSeries a{
+    display: flex;
+    width: 15vw;
+    margin: 2.5%;
+    justify-content: center;
+    background-color: rgb(226, 150, 79);
+    color:rgb(14, 14, 14);
+    list-style:none;
+    font-size: x-large;
+}
+
+    
 
 /*Footer*/
 

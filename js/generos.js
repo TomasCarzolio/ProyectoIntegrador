@@ -30,7 +30,7 @@ inputField.addEventListener('focus', function(evento){
 // Fin de formulario
 
 // Fetch de generos de peliculas
-let apiKey= `?api_key=ff0d15573865ddc49a8a0b0024148010`
+const apiKey= `?api_key=ff0d15573865ddc49a8a0b0024148010`
 
 let urlGeneros= `https://api.themoviedb.org/3/genre/movie/list${apiKey}`
 
@@ -46,7 +46,7 @@ fetch(urlGeneros)
         console.log(genres);
         
         for (let i = 0; i<genres.genres.length;i++){
-            generos += ` <a href="detail-genero.html?id=${genres.genres[i].id}"><h2> ${genres.genres[i].name}</h2></a> ` 
+            generos += `<a href="detail-genero.html?id=${genres.genres[i].id}"><li><p> ${genres.genres[i].name}</p></li></a>` 
         }
           
            console.log(generos);
@@ -74,7 +74,7 @@ fetch(urlGenerosTv)
         console.log(genres);
         
         for (let i = 0; i<genres.genres.length;i++){
-            generosTv += ` <a href="detail-genero.html?id=${genres.genres[i].id}"><h2> ${genres.genres[i].name}</h2></a> ` 
+            generosTv += ` <a href="detail-genero.html?id=${genres.genres[i].id}"><li><p>${genres.genres[i].name}</p></li></a>` 
         }
           
            console.log(generosTv);
