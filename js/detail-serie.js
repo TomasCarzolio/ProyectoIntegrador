@@ -46,7 +46,7 @@ console.log (id);
 let urlVistoSerie = `https://api.themoviedb.org/3/tv/${id}?api_key=${apiKey}&language=en-US`
 console.log(urlVistoSerie);
 
-let detalleSerie = document.querySelector('main');
+let detalleSerie = document.querySelector('.series');
 let elementoLista = '';
 let generos = '';
 let info= 'datos.genres'

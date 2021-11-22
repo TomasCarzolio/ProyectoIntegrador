@@ -82,9 +82,8 @@ h1{
     text-align: center;  
     } 
 
-main{ 
+.movies { 
     display: flex; 
-    
     flex-direction: row;
     font-family: 'Kanit', sans-serif;
     margin: 0% 10% 3% 10%; 
@@ -127,6 +126,12 @@ main{
     margin:0%;
     height: 6vh;
     width: 30vw;
+}
+
+article .info-generos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .posicion-pelicula h2{
