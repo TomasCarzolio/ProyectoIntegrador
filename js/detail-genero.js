@@ -31,6 +31,8 @@ inputField.addEventListener('focus', function(evento){
 
 const apiKey= `?api_key=ff0d15573865ddc49a8a0b0024148010`
 
+//Buscar el ID del genero
+
 let queryString = location.search; 
 
 let qsToObject = new URLSearchParams(queryString);
@@ -38,15 +40,20 @@ let qsToObject = new URLSearchParams(queryString);
 let id = qsToObject.get ('id') 
 console.log (id);
 
-// Buscar el titulo del genero
+// Ver si es genero de peliculas o de tv
 
-const search_results = new URLSearchParams(location.search);
+let query = location.search; 
 
-    const codigo = search_results.get('id');
+let qsAObjeto = new URLSearchParams(query);
+
+let tipo = qsAObjeto.get ('query') 
+console.log (tipo);
+
+// Buscar el titulo del genero dependiendo si es de pelis o tv
 
     const key = "55cbbe7af7e1023dd9dfbcc869907517";
 
-    let urlTituloGenero = `https://api.themoviedb.org/3/genre/${codigo}?api_key=${key}&language=es`;
+    let urlTituloGenero = `https://api.themoviedb.org/3/genre/${id}?api_key=${key}&language=es`;
 
     console.log(urlTituloGenero);
 
@@ -65,9 +72,14 @@ const search_results = new URLSearchParams(location.search);
         console.log(error);
     })
 
-// Buscar peliculas de ese genero
+
+// Buscar peliculas y series de ese genero, dependiendo de donde se clickeó
 
 let urlGenerosPeliculas= `https://api.themoviedb.org/3/discover/movie?api_key=924a6f16470b17afdd20524ec31c09be&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${id}&with_watch_monetization_types=flatrate`
+
+let urlGenerosSeries= `https://api.themoviedb.org/3/discover/tv?api_key=924a6f16470b17afdd20524ec31c09be&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${id}&with_watch_monetization_types=flatrate`
+
+if (tipo == "movie"){
 
 fetch(urlGenerosPeliculas)
     .then(function(response){
@@ -85,11 +97,8 @@ fetch(urlGenerosPeliculas)
     .catch(function(error){
         console.log(error);
     })
-    
 
-// Buscar series de ese genero
-
-let urlGenerosSeries= `https://api.themoviedb.org/3/discover/tv?api_key=924a6f16470b17afdd20524ec31c09be&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${id}&with_watch_monetization_types=flatrate`
+} else {
 
 fetch(urlGenerosSeries)
     .then(function(response){
@@ -100,14 +109,13 @@ fetch(urlGenerosSeries)
         let listaGenerosSeries = document.querySelector(`.detalleGeneroTv`)
         let generosTv = "";
         for(i=0;i<data.results.length;i++){
-            generosTv += `<div><a href="detail-movie.html?id=${data.results[i].id}"><img <img src="https://image.tmdb.org/t/p/w342${data.results[i].poster_path}" alt="Poster"></a><p>${data.results[i].name}</p><p>${data.results[i].first_air_date}</p></div> `
+            generosTv += `<div><a href="detail-serie.html?id=${data.results[i].id}"><img src="https://image.tmdb.org/t/p/w342${data.results[i].poster_path}" alt="Poster"></a><p>${data.results[i].name}</p><p>${data.results[i].first_air_date}</p></div> `
             listaGenerosSeries.innerHTML = generosTv; 
         }
     })
     .catch(function(error){
         console.log(error);
     })
-    
-
+}
 
     
