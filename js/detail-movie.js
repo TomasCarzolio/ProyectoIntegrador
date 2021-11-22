@@ -91,18 +91,16 @@ fetch(urlPeliculas)
                                 </article>
 
                                 <article>
-                                    <div>
-                                            <p class= "puntuación"> Puntuación: ${datos.vote_average}</p>
-                                        </div>
-                                        <div>
+                                    
+                                        <p class= "puntuación"> Puntuación: ${datos.vote_average}</p>
                                         <a class="favs" href="">Agregar a favoritos</a>
-                                        </div>
+                                        
                                         
                                 </article>
 
                             </section>`
         }
-        detallePelicula.innerHTML= elementoLista;
+        detallePelicula.innerHTML = elementoLista;
 
     //Array para guardar ids de gifs favoritos
     let favoritosPelis = [];
