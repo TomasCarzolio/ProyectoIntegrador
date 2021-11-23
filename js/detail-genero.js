@@ -37,35 +37,29 @@ let queryString = location.search;
 
 let qsToObject = new URLSearchParams(queryString);
 
-let id = qsToObject.get ('id') 
+let id = qsToObject.get('id');
 console.log (id);
 
 // Ver si es genero de peliculas o de tv
 
-let query = location.search; 
-
-let qsAObjeto = new URLSearchParams(query);
-
-let tipo = qsAObjeto.get ('query') 
+let tipo = qsToObject.get ('query'); 
 console.log (tipo);
+
+// Definir el nombre del genero
 
 let nombreGenero = qsToObject.get("nombreGenero");
 
 let tituloGenero = document.querySelector(`.tituloGenero`);
 
 tituloGenero.innerText = nombreGenero;
+console.log(nombreGenero);
 
 let urlGenerosPeliculas= `https://api.themoviedb.org/3/discover/movie?api_key=924a6f16470b17afdd20524ec31c09be&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${id}&with_watch_monetization_types=flatrate`
 
 let urlGenerosSeries= `https://api.themoviedb.org/3/discover/tv?api_key=924a6f16470b17afdd20524ec31c09be&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${id}&with_watch_monetization_types=flatrate`
 
-let urlTituloGenero = `https://api.themoviedb.org/3/genre/${id}${apiKey}`;
 
-    console.log(urlTituloGenero);
-
-   
-
-// Buscar el titulo del genero, y peliculas y series de ese genero, dependiendo de donde se clickeó
+// Buscar peliculas o series de ese genero, dependiendo de donde se clickeó
 
 if (tipo == "movie"){
 

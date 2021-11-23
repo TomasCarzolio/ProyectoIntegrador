@@ -49,7 +49,6 @@ fetch(urlGeneros)
             generos += `<a href="detail-genero.html?id=${genres.genres[i].id}&query=movie&nombreGenero=${genres.genres[i].name}"><li><p> ${genres.genres[i].name}</p></li></a>` 
         }
           
-           console.log(generos);
            listaGeneros.innerHTML = generos;
           })
     .catch(function(error){
@@ -76,8 +75,6 @@ fetch(urlGenerosTv)
         for (let i = 0; i<genres.genres.length;i++){
             generosTv += ` <a href="detail-genero.html?id=${genres.genres[i].id}&query=tv&nombreGenero=${genres.genres[i].name}"><li><p>${genres.genres[i].name}</p></li></a>` 
         }
-          
-           console.log(generosTv);
            listaGenerosTv.innerHTML = generosTv;
           })
     .catch(function(error){
