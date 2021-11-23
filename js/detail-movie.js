@@ -89,16 +89,9 @@ fetch(urlPeliculas)
                                     <p class= "duración"> Duración: ${datos.runtime} minutos</p>
                                 </article>
 
-                                <article>
-                                    
+                                <article class= "info-2>
                                         <p class= "puntuación"> Puntuación: ${datos.vote_average}</p>
                                         <a class="favs" href="">Agregar a favoritos</a>
-<<<<<<< HEAD
-                                        
-                                        
-=======
-                                        </div>
->>>>>>> 15f29e773597fb28fbdfc585f84b7c8d26f90411
                                 </article>
 
                             </section>`
@@ -154,4 +147,3 @@ fetch(urlPeliculas)
 })
 
 
-     //VER TEMA GENEROS

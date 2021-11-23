@@ -173,6 +173,10 @@ p{
     line-height:25px;
 }
 
+ .info-2{
+    display: block;
+    text-align: center;  
+}
 
 
 /*Footer*/

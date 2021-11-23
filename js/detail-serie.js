@@ -152,5 +152,4 @@ fetch(urlVistoSerie)
     })
 
 
-     //VER TEMA GENEROS
-      // <a href= ".generos.html">  <h3 id="generos"> Género/s: ${datos.genres[i].name} </h3> </a> 
+    
