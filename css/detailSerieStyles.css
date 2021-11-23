@@ -81,7 +81,7 @@ h1{
     text-align: center;  
     } 
 
-main{ 
+.series {
     display: flex; 
     flex-wrap:wrap;
     flex-direction: row;
@@ -89,7 +89,6 @@ main{
     margin: 0% 10% 3% 10%; 
     padding: 3.5%;
 }
-
 
 .imagen {
     display: flex;

@@ -95,6 +95,17 @@ header h2{
     margin: 0 2.5% 0 2.5%;
  }
 
+ .borrar{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 25vw;
+    height: 10vh;
+    font-size: xx-large;
+    background-color: chocolate ;
+    color: black;
+
+}
 
 
  
