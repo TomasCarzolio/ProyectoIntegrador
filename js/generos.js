@@ -46,7 +46,7 @@ fetch(urlGeneros)
         console.log(genres);
         
         for (let i = 0; i<genres.genres.length;i++){
-            generos += `<a href="detail-genero.html?id=${genres.genres[i].id}&query=movie"><li><p> ${genres.genres[i].name}</p></li></a>` 
+            generos += `<a href="detail-genero.html?id=${genres.genres[i].id}&query=movie&nombreGenero=${genres.genres[i].name}"><li><p> ${genres.genres[i].name}</p></li></a>` 
         }
           
            console.log(generos);
@@ -74,7 +74,7 @@ fetch(urlGenerosTv)
         console.log(genres);
         
         for (let i = 0; i<genres.genres.length;i++){
-            generosTv += ` <a href="detail-genero.html?id=${genres.genres[i].id}&query=tv"><li><p>${genres.genres[i].name}</p></li></a>` 
+            generosTv += ` <a href="detail-genero.html?id=${genres.genres[i].id}&query=tv&nombreGenero=${genres.genres[i].name}"><li><p>${genres.genres[i].name}</p></li></a>` 
         }
           
            console.log(generosTv);

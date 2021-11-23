@@ -88,3 +88,4 @@ resultadosTv.innerHTML = "<h2>Series que coinciden con tu búsqueda: </h2>" + re
 .catch (function(error){
 console.log(error);
 })
+
