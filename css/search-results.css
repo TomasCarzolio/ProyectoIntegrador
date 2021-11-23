@@ -73,7 +73,7 @@ header h2{
 /*Body*/
  
 
-.favoritos{
+.resultadosPelis , .resultadosTv{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -82,6 +82,36 @@ header h2{
     text-align: center;
     font-family: 'Kanit', sans-serif; 
     width: 100vw;
+ }  
+
+ .resultadosPelis div, .resultadosTv div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 20vw;
+    margin: 2.5%;
+ }  
+
+ .resultadosPelis h2, .resultadosTv h2{
+    color: rgb(238, 137, 100);
+    text-align: center;
+   font-size: 250%;
+   width: 100%; 
+   font-weight: 900;
+   font-family: 'Kanit', sans-serif; 
+   margin-bottom: 5%;
+ }
+
+ .resultadosPelis h3, .resultadosTv h3{
+    color: rgb(238, 137, 100);
+    text-align: center;
+   font-size: 150%;
+   width: 100%; 
+   font-weight: 900;
+   font-family: 'Kanit', sans-serif; 
+   margin-bottom: 5%;
  }
 
  .favoritos article{
@@ -92,13 +122,14 @@ header h2{
      padding: 5% 5%;
  }
 
- .favoritos h1{
+ .results h1{
+     display: flex;
     font-family: 'Kanit', sans-serif; 
     color: rgb(202, 57, 5);
     width: 100%; 
-    text-align:start;
-    font-size: xxx-large;
-    margin: 5% 0% 5% 0%;
+    font-size: 300%;
+    margin: 5%;
+    justify-content: center;
  }
  
   

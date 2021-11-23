@@ -29,6 +29,24 @@ inputField.addEventListener('focus', function(evento){
 )
 // Fin de formulario
 
+// GIF de carga de página
+let pantalla = document.querySelector(`main`)
+let urlGif = `api.giphy.com/v1/gifs/xThuWaDrEDHbYicmha`;
+let gif = document.querySelector(`.results`);
+let loadGif = ``;
+pantalla.addEventListener(`load`, function(){
+    fetch(urlGif)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+       gif.innerHTML = "<img url=`${data.url}>`"
+    })
+    .catch(function(error){
+        console.log(error);
+    })
+  
+})
 //Recuperar búsqueda de la URL
 let queryString = location.search; 
 
@@ -65,25 +83,35 @@ fetch(urlSearch)
 
 .then(function(data){
     console.log(data);
+if (data.results.length<1){
+    resultadosPelis.innerHTML = "<h2>No hay coincidencias para tu búsqueda</h2>"
+} else {
 for (let i=0; i<data.results.length; i++){
     if (data.results[i].media_type == "movie"){
+        if (data.results[i].length<1){
+            resultadosPelis.innerHTML = "<h2>Ninguna pelicula coincide con tu búsqueda</h2>";
+        } else{
         resultsP += ` <div><a href="./detail-movie.html?id=${data.results[i].id}"><img src="https://image.tmdb.org/t/p/w342${data.results[i].poster_path}" alt="imagen"></a>
         <h3>${data.results[i].title}</h3>
         <p> ${data.results[i].release_date} </p>
-    </div>`
+    </div>`}
     } else if (data.results[i].media_type == "tv"){
+        if (data.results[i].length<1){
+            resultadosTv.innerHTML = "<h2>Ninguna serie coincide con tu búsqueda</h2>";
+        } else{
         resultsTv += `<div><a href="./detail-serie.html?id=${data.results[i].id}"><img src="https://image.tmdb.org/t/p/w342${data.results[i].poster_path}" alt="imagen"></a>
         <h3>${data.results[i].name}</h3>
         <p> ${data.results[i].first_air_date} </p>
     </div>` 
 
-
+        }
     }
 } 
 
 resultadosPelis.innerHTML = "<h2>Peliculas que coinciden con tu búsqueda: </h2>" + resultsP;
 resultadosTv.innerHTML = "<h2>Series que coinciden con tu búsqueda: </h2>" + resultsTv;
-})
+}})
+
 
 .catch (function(error){
 console.log(error);

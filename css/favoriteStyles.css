@@ -12,7 +12,7 @@ a{
 
 form button{
     color: orangered;
-}
+}  
 
 .principio{  
     display: flex;
@@ -72,17 +72,47 @@ header h2{
 
 /*Body*/
  
+h1{
+    display: flex;
+    justify-content: center;
+    padding: 0.5%;
+    margin: 0%;
+    font-family: 'Kanit', sans-serif; 
+    color: rgb(202, 57, 5);
+    width: 100%; 
+    text-transform: uppercase;
+    font-size: 400%;
+    text-align: center;  
+}
 
 .favs, .favsPelis{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
     background-color: rgb(251, 247, 238);
-    text-align: center;
-    font-family: 'Kanit', sans-serif; 
-    width: 100%;
  }
+
+ .favs h2, .favsPelis h2{
+    color: rgb(238, 137, 100);
+    text-align: center;
+   font-size: 250%;
+   width: 100%; 
+   font-weight: 900;
+   font-family: 'Kanit', sans-serif; 
+   margin-bottom: 5%;
+ }
+
+
+ .favs h3, .favsPelis h3{
+    color: rgb(238, 137, 100);
+    text-align: center;
+   font-size: 150%;
+   width: 100%; 
+   font-weight: 900;
+   font-family: 'Kanit', sans-serif; 
+   margin-bottom: 5%;
+ }
+
 
  .favs div, .favsPelis div{
     display: flex;
@@ -92,19 +122,23 @@ header h2{
     text-align: center;
     font-family: 'Kanit', sans-serif; 
     width: 20vw;
-    margin: 0 2.5% 0 2.5%;
+    margin: 2%;
  }
 
- .borrar{
+ .borrar {
     display: flex;
     justify-content: center;
     align-content: center;
-    width: 25vw;
-    height: 10vh;
     font-size: xx-large;
-    background-color: chocolate ;
-    color: black;
+    border-width:thick;
+    border-color: rgb(202, 57, 5);
+    justify-self: center;
+}
 
+.borrar p{
+    color: rgb(238, 137, 100);
+    font-family: 'Kanit', sans-serif; 
+    text-align:center;
 }
 
  .favs h1, .favsPelis h1{
@@ -116,6 +150,7 @@ header h2{
     margin: 5% 0% 5% 0%;
  }
  
+
  article.info{
      display: flex;
      justify-content: center;
@@ -123,25 +158,14 @@ header h2{
 
  }
   
- /* section img{
+ section img{
     width: 100%;
     height: 90%;
     border-style: solid;
     border-color: rgb(238, 137, 100);
- }   */      
-        
- section p{
-    color: rgb(41, 51, 61);
+ }     
     
- }
-    
- section h2{  /*titulos de main*/
-    color: rgb(202, 57, 5);
-    width: 100%; 
-    text-align: center;
- }
-    
-.favoritos h3{  /*nombre de las series/peliculas*/
+.favs h3, .favsPelis h3{  /*nombre de las series/peliculas*/
     color: rgb(238, 137, 100);
     text-align: center;
     width: 100%;
@@ -272,7 +296,8 @@ header h2{
      flex-wrap: wrap;
      justify-content: center;
      flex-direction: row;
-     width: 15%;
+     width: 100%;
+     align-content: center;
  } 
  
      /*Footer*/

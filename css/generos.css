@@ -24,7 +24,7 @@ form button{
     padding-left: 4%;
     width: 100%;
 } 
-
+  
 header ul{
     display: flex;
     flex-wrap: wrap;
@@ -71,15 +71,29 @@ header h2{
 h1{
     display: flex;
     justify-content: center;
-    padding: 2%;
+    padding: 0.5%;
+    margin: 0%;
+    font-family: 'Kanit', sans-serif; 
+    color: rgb(202, 57, 5);
+    width: 100%; 
+    text-transform: uppercase;
+    font-size: 400%;
+    text-align: center;  
 }
-.titulo h2{
+.titulo {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     font-weight: 900;
     font-size: xx-large;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(238, 137, 100);
+    font-family: 'Kanit', sans-serif;
+    justify-content: center;
 }
+
+.titulo h2{
+    margin: 0%;
+}
+
 
 .generosPeliculas, .generosSeries{
     text-decoration: none;

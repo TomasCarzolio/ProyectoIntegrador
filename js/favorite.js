@@ -42,7 +42,7 @@ let lista = document.querySelector(`.favs`);
 let contenidoLista = "";
 
 if(favoritos == null || favoritos.length == 0){
-    lista.innerHTML = '<h3>Todavía no has agregado series favoritas</h3>';
+    lista.innerHTML = '<h2>Todavía no has agregado series favoritas</h2>';
 }
 else{
 //Recorrer el array:
@@ -61,7 +61,7 @@ for(let i=0; i<favoritos.length; i++){
                                 <p> ${data.first_air_date} </p>
                             </div>` 
 
-            lista.innerHTML = "<h2>Series</h2>" + contenidoLista;
+            lista.innerHTML = "<h2>SERIES</h2>" + contenidoLista;
         })
         .catch( function(error){
             console.log(error);
@@ -78,7 +78,7 @@ let listaPelis = document.querySelector(`.favsPelis`);
 let contenidoListaPelis = "";
 
 if(favoritosPelis == null || favoritosPelis.length == 0){
-    listaPelis.innerHTML = '<h3>Todavía no has agregado peliculas favoritas</h3>';
+    listaPelis.innerHTML = '<h2>Todavía no has agregado peliculas favoritas</h2>';
 }
 else{
 //Recorrer el array:
@@ -98,7 +98,7 @@ for(let i=0; i<favoritosPelis.length; i++){
                                 <p> ${data.release_date} </p>
                             </div>` 
 
-            listaPelis.innerHTML = "<h2>Peliculas</h2>" + contenidoListaPelis;
+            listaPelis.innerHTML = "<h2>PELICULAS</h2>" + contenidoListaPelis;
         })
         .catch( function(error){
             console.log(error);

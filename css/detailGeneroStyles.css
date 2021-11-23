@@ -67,38 +67,53 @@ header h2{
 /*Body*/
 
    
-section{
+main{
+    background-color: rgb(251, 247, 238);
+}
+.tituloGenero{
+    display: flex;
+    justify-content: center;
+    padding: 0.5%;
+    margin: 2%;
+    font-family: 'Kanit', sans-serif; 
+    color: rgb(202, 57, 5);
+    width: 100%; 
+    text-transform: uppercase;
+    font-size: 400%;
+    text-align: center;  
+}
+.detalleGenero{
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
-   background-color: rgb(251, 247, 238);
    text-align: center;
    font-family: 'Kanit', sans-serif; 
 }
 
-section div{
-   width: 200px;
-   margin: 30px 40px;
+.cubos{
+   width: 15%;
+   margin:0 5% 0 5%;
    text-align: center;
    font-family: 'Kanit', sans-serif;   
 }
  
 section img{
-   width: 100%;
-   height: 280px;
-   border-style: solid;
-   border-color: rgb(238, 137, 100);
-}         
+    width: 100%;
+    height: 60%;
+    border-style: solid;
+    border-color: rgb(238, 137, 100);
+ }         
        
    
-section h2{  /*titulos de main*/
-   color: rgb(202, 57, 5);
+section .nombre{  /*titulos de main*/
+    color: rgb(238, 137, 100);
+    text-align: center;
+   font-size: 125%;
    width: 100%; 
-   text-align: start;
+   font-weight: 900;
 }
    
-section h3{  /*nombre de las series/peliculas*/
-   color: rgb(238, 137, 100);
+section .fecha {  /*nombre de las series/peliculas*/
    text-align: center;
 }
 

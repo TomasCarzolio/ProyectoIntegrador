@@ -59,8 +59,6 @@ let urlGenerosPeliculas= `https://api.themoviedb.org/3/discover/movie?api_key=92
 
 let urlGenerosSeries= `https://api.themoviedb.org/3/discover/tv?api_key=924a6f16470b17afdd20524ec31c09be&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${id}&with_watch_monetization_types=flatrate`
 
-const key = "55cbbe7af7e1023dd9dfbcc869907517";
-
 let urlTituloGenero = `https://api.themoviedb.org/3/genre/${id}${apiKey}`;
 
     console.log(urlTituloGenero);
@@ -80,7 +78,7 @@ fetch(urlGenerosPeliculas)
         let listaGenerosPeliculas = document.querySelector(`.detalleGenero`)
         let generos = "";
         for(i=0;i<data.results.length;i++){
-            generos += `<div><a href="detail-movie.html?id=${data.results[i].id}"><img src="https://image.tmdb.org/t/p/w342${data.results[i].poster_path}" alt="Poster"></a><p>${data.results[i].title}</p><p>${data.results[i].release_date}</p></div>`
+            generos += `<div class=cubos><a href="detail-movie.html?id=${data.results[i].id}"><img src="https://image.tmdb.org/t/p/w342${data.results[i].poster_path}" alt="Poster"></a><p class="nombre">${data.results[i].title}</p><p class="fecha">${data.results[i].release_date}</p></div>`
         } listaGenerosPeliculas.innerHTML = generos; 
        
     })
@@ -101,7 +99,7 @@ fetch(urlGenerosSeries)
         let listaGenerosSeries = document.querySelector(`.detalleGenero`)
         let generosTv = "";
         for(i=0;i<data.results.length;i++){
-            generosTv += `<div><a href="detail-serie.html?id=${data.results[i].id}"><img src="https://image.tmdb.org/t/p/w342${data.results[i].poster_path}" alt="Poster"></a><p>${data.results[i].name}</p><p>${data.results[i].first_air_date}</p></div> `
+            generosTv += `<div class=cubos><a href="detail-serie.html?id=${data.results[i].id}"><img src="https://image.tmdb.org/t/p/w342${data.results[i].poster_path}" alt="Poster"></a><p class="nombre">${data.results[i].name}</p><p class="fecha">${data.results[i].first_air_date}</p></div>`
             listaGenerosSeries.innerHTML = generosTv; 
         }
     })
