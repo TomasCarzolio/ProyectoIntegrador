@@ -39,18 +39,16 @@ fetch(urlVistoPeliculas)
     .then(function(response){
         return response.json();
     })
-    .then(function(page){ //datos que acaba de procesar
+    .then(function(page){ 
         console.log(page);
 
-        //capturar elementos del DOM
-       let lista = document.querySelector('.masVistoPeliculas');
+       let lista = document.querySelector('.masVistoPeliculas'); //DOM
 
-       //actualizar datos con el endpoint
-       let elementosListaPeliculas = ''
+       let elementosListaPeliculas = '' //actualizar datos con el endpoint
 
-       let info = page.results; //para acortar el array
+       let info = page.results; 
 
-       for (let i=0; i<=4; i++){ //para que agregue y no pise 
+       for (let i=0; i<=4; i++){ 
            //console.log(info)
         elementosListaPeliculas += 
                             
@@ -61,10 +59,10 @@ fetch(urlVistoPeliculas)
                            </div>`                    
         }
 
-       //manda al DOM el elemento actualizado 
+        
         lista.innerHTML += elementosListaPeliculas;
-
     })
+
     .catch(function(error){
         console.log(error);
     })
