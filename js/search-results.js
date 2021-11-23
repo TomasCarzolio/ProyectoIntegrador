@@ -95,6 +95,7 @@ for (let i=0; i<data.results.length; i++){
         <h3>${data.results[i].title}</h3>
         <p> ${data.results[i].release_date} </p>
     </div>`}
+    resultadosPelis.innerHTML = "<h2>Peliculas que coinciden con tu búsqueda: </h2>" + resultsP;
     } else if (data.results[i].media_type == "tv"){
         if (data.results[i].length<1){
             resultadosTv.innerHTML = "<h2>Ninguna serie coincide con tu búsqueda</h2>";
@@ -103,13 +104,11 @@ for (let i=0; i<data.results.length; i++){
         <h3>${data.results[i].name}</h3>
         <p> ${data.results[i].first_air_date} </p>
     </div>` 
-
         }
+        resultadosTv.innerHTML = "<h2>Series que coinciden con tu búsqueda: </h2>" + resultsTv;
     }
 } 
 
-resultadosPelis.innerHTML = "<h2>Peliculas que coinciden con tu búsqueda: </h2>" + resultsP;
-resultadosTv.innerHTML = "<h2>Series que coinciden con tu búsqueda: </h2>" + resultsTv;
 }})
 
 

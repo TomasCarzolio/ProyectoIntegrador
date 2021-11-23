@@ -55,9 +55,8 @@ fetch(urlGeneros)
         console.log(error);
     })
 
-
-
-    // Fetch de generos de series
+ 
+// Fetch de generos de series
 
 let urlGenerosTv= `https://api.themoviedb.org/3/genre/tv/list${apiKey}`
 
