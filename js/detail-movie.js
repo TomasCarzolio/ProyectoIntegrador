@@ -61,7 +61,7 @@ fetch(urlPeliculas)
         console.log(datos);
         
         for (let i=0; i<datos.genres.length; i++){
-            generos += `<a href= ".generos.html?id?=${datos.genres[i].id}&nombregenero=${datos.genres[i].name}">  <h3 class="generos"> ${datos.genres[i].name} </h3> </a>`
+            generos += `<a href= "detail-genero.html?id=${datos.genres[i].id}&query=movie&nombreGenero=${datos.genres[i].name}"><h3 class="generos">${datos.genres[i].name}</h3> </a>`
         } 
 
         for (let i=0; i<1; i++){
@@ -76,7 +76,7 @@ fetch(urlPeliculas)
 
                                 <article class= "info-generos">
                                 <h3> Género/s: </h3>
-                                <p class= "generos"> ${generos} </p>
+                                <p class= "generos"> ${generos}</p>
                                 </article>
 
                                 <article>
