@@ -77,7 +77,7 @@ fetch(urlPeliculas)
                                 <article class= "info-generos">
                                 <h3> Género/s: </h3>
                                 <p class= "generos"> ${generos} </p>
-                                  
+                                </article>
 
                                 <article>
                                     <p class="descripcion"> ${datos.overview} </p>
@@ -86,16 +86,19 @@ fetch(urlPeliculas)
 
                                 <article class= "info">
                                     <p class= "estreno"> Fecha de estreno: ${datos.release_date} </p>
-                                    <p class= "duración"> Duración: ${datos.runtime} </p>
-                                  
+                                    <p class= "duración"> Duración: ${datos.runtime} minutos</p>
                                 </article>
 
                                 <article>
                                     
                                         <p class= "puntuación"> Puntuación: ${datos.vote_average}</p>
                                         <a class="favs" href="">Agregar a favoritos</a>
+<<<<<<< HEAD
                                         
                                         
+=======
+                                        </div>
+>>>>>>> 15f29e773597fb28fbdfc585f84b7c8d26f90411
                                 </article>
 
                             </section>`

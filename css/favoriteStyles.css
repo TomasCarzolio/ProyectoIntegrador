@@ -107,9 +107,6 @@ header h2{
 
 }
 
-
- 
-
  .favs h1, .favsPelis h1{
     font-family: 'Kanit', sans-serif; 
     color: rgb(202, 57, 5);
@@ -119,6 +116,12 @@ header h2{
     margin: 5% 0% 5% 0%;
  }
  
+ article.info{
+     display: flex;
+     justify-content: center;
+     justify-self: center;
+
+ }
   
  /* section img{
     width: 100%;
