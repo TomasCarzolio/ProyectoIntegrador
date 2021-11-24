@@ -30,23 +30,30 @@ inputField.addEventListener('focus', function(evento){
 // Fin de formulario
 
 // GIF de carga de página
-let pantalla = document.querySelector(`main`)
-let urlGif = `api.giphy.com/v1/gifs/xThuWaDrEDHbYicmha`;
-let gif = document.querySelector(`.results`);
-let loadGif = ``;
-pantalla.addEventListener(`load`, function(){
+
+let cargar = document.querySelector(`.results`);
+let gif = "";
+
+let urlGif = `https://api.giphy.com/v1/gifs/ZO9b1ntYVJmjZlsWlm?api_key=JR3bgP56BnCT6AAE3GiUNyYc3b2eXsOR`
+console.log(urlGif);
+
+cargar.addEventListener(`load`, function(){
     fetch(urlGif)
     .then(function(response){
-        return response.json();
+        return response.json()
     })
-    .then(function(data){
-       gif.innerHTML = "<img url=`${data.url}>`"
+    
+    .then(function(results){
+      console.log(results);
+      gif = `<img class="" src="${results.data.images.original.url}">`
+      cargar.innerHTML = gif;
     })
-    .catch(function(error){
-        console.log(error);
+    .catch (function(error){
+    console.log(error);
     })
-  
+    
 })
+
 //Recuperar búsqueda de la URL
 let queryString = location.search; 
 
@@ -115,4 +122,7 @@ for (let i=0; i<data.results.length; i++){
 .catch (function(error){
 console.log(error);
 })
+
+
+
 

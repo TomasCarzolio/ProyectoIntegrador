@@ -68,7 +68,15 @@ header h2{
     margin-bottom: 5%;
 }
 
+.message{
+    display: flex;
+    justify-self: center;
+    align-content: center;
+    color: rgb(238, 137, 100);
+    font-weight: 700;
+    font-family: 'Kanit', sans-serif;  
 
+}
 
 /*Body*/
  
